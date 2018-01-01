@@ -26,7 +26,7 @@ var app = app || {};
     $('.button1').on('click', function() {
       $('.container').hide();
       $('.first-view').show();
-      let template = Handlebars.compile($('.first-view-template').text());
+      let template = Handlebars.compile($('.video-view-template').text());
       $('#first-view').append(template());
     });
   };
@@ -37,7 +37,13 @@ var app = app || {};
     // Empty out the emptySelector if one was provided
     $('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
-    $('ADD ID/CLASS').show();
+    console.log('you are in second page');
+    $('.button2').on('click', function() {
+      $('.container').hide();
+      $('.second-view').show();
+      let template = Handlebars.compile($('.video-view-template').text());
+      $('#first-view').append(template());
+    });
   };
 
   pageView.thirdPage = () => {
