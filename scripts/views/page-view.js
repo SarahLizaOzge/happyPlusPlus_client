@@ -9,38 +9,44 @@ var app = app || {};
   pageView.initIndexPage = () => {
     console.log('initIndexPage');
     // Hide the hideSelector if one was provided
-    //$('.container').hide();
+    $('.container').hide();
     // Empty out the emptySelector if one was provided
     //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
-    //$('ADD ID/CLASS').show();
+    $('.main-view').show();
   };
 
   pageView.firstPage = () => {
     // Hide the hideSelector if one was provided
-    //$('.container').hide();
+    $('.container').hide();
     // Empty out the emptySelector if one was provided
     //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
-    //$('ADD ID/CLASS').show();
+    console.log('you are in firstPage');
+    $('.button1').on('click', function() {
+      $('.container').hide();
+      $('.first-view').show();
+      let template = Handlebars.compile($('.first-view-template').text());
+      $('#first-view').append(template());
+    });
   };
 
   pageView.secondPage = () => {
     // Hide the hideSelector if one was provided
-    // $('.container').hide();
+    $('.container').hide();
     // Empty out the emptySelector if one was provided
-    //$('ADD ID/CLASS').empty();
+    $('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
-    //$('ADD ID/CLASS').show();
+    $('ADD ID/CLASS').show();
   };
 
   pageView.thirdPage = () => {
     // Hide the hideSelector if one was provided
-    //$('.container').hide();
+    $('.container').hide();
     // Empty out the emptySelector if one was provided
-    //$('ADD ID/CLASS').empty();
+    $('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
-    //$('ADD ID/CLASS').show();
+    $('ADD ID/CLASS').show();
   };
 
 

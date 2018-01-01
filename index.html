@@ -14,6 +14,10 @@
     <h3>Uh oh! There was an error!!</h3>
     <p>{{status}}: {{statusTest}}</p>
   </script>
+  <script id="first-view-template" type="text/x-handlebarse-template">
+    <h3>now your in first container</h3>
+
+  </script>
   </head>
   <body>
     <!-- Hamburger Menu-->
@@ -52,13 +56,15 @@
         <section id="error-message"></section>
       </section> -->
       <!-- Main View Container -->
+     
       <section class="main-view container">
-        <button type="button" class="button1">First</button>
+        <button type="button" class="button1"><a href="/first">First</a></button>
         <button type="button" class="button2">Second</button>
         <button type="button" class="button3">Third</button>
       </section>
       <!-- First View Container -->
       <section class="first-view container">
+          <section id="first-view"></section>
       </section>
        <!-- Second View Container -->
        <section class="second-view container">
