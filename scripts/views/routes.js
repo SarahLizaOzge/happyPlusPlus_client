@@ -11,6 +11,8 @@ page('/', () => app.pageView.initIndexPage());
 //   app.Book.fetchAll(app.bookView.initIndexPage);
 // });
 page('/first', () => app.pageView.firstPage());
+page('/second', () => app.pageView.secondPage());
+page('/third', () => app.pageView.thirdPage());
 //pageView.firstPage = ()
 
 page();
