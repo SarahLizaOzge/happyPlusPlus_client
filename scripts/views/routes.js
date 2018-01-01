@@ -13,6 +13,8 @@ page('/', () => app.pageView.initIndexPage());
 page('/first', () => app.pageView.firstPage());
 page('/second', () => app.pageView.secondPage());
 page('/third', () => app.pageView.thirdPage());
+page('/user', () => app.pageView.loginPage(app.pageView.initAddUserPage()));
+
 //pageView.firstPage = ()
 
 page();

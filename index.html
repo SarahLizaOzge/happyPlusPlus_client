@@ -19,6 +19,11 @@
     <h3>now your in container</h3>
   </script>
   </head>
+ <!-- Users Handlebars Template -->
+  <script id="user-view-template" type="text/x-handlebarse-template">
+    
+  </script>
+  </head>
   <body>
     <!-- Hamburger Menu-->
     <!-- <header>
@@ -45,7 +50,8 @@
         <nav class="topnav">
           <a class="active" href=#>Home</a>
           <a class="active" href=#>About Us</a>
-          <a class="active" href="/user">Log In</a>
+         <a class="active" href="/user" id= "user-login">Log In</a> 
+          <!-- <button type="button" class="userbutton"><a href="/user">Sign Up</a></button> -->
         </nav>
       </header>
     <!-- Main -->
@@ -76,7 +82,7 @@
       <!-- User Container -->
       <section class="user-view container">
               <h1>Add user</h1>
-              <form action="/" id="bookform" method="post">
+              <form id="user-form" method="post">
                   <input placeholder="username" name="username" id="username" type="text" required></br>
                   <input placeholder="password" name="password" id="password" type="password" required></br>
                   <input placeholder="email" name="email" id="email" type="text" required></br>
