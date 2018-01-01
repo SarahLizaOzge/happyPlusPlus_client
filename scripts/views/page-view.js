@@ -35,14 +35,14 @@ var app = app || {};
     // Hide the hideSelector if one was provided
     $('.container').hide();
     // Empty out the emptySelector if one was provided
-    $('ADD ID/CLASS').empty();
+    // $('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
     console.log('you are in second page');
     $('.button2').on('click', function() {
       $('.container').hide();
       $('.second-view').show();
       let template = Handlebars.compile($('.video-view-template').text());
-      $('#first-view').append(template());
+      $('#second-view').append(template());
     });
   };
 
@@ -50,9 +50,15 @@ var app = app || {};
     // Hide the hideSelector if one was provided
     $('.container').hide();
     // Empty out the emptySelector if one was provided
-    $('ADD ID/CLASS').empty();
+    //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
-    $('ADD ID/CLASS').show();
+    console.log('you are in third page');
+    $('.button3').on('click', function() {
+      $('.container').hide();
+      $('.third-view').show();
+      let template = Handlebars.compile($('.video-view-template').text());
+      $('#third-view').append(template());
+    });
   };
 
 
