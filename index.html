@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy++</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Error Handlebars Template -->
+  <script id="error-template" type="text/x-handlebarse-template">
+    <h3>Uh oh! There was an error!!</h3>
+    <p>{{status}}: {{statusTest}}</p>
+  </script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <!-- Hamburger Menu-->
+    <!-- <header>
+      <div class='containerMenu'>
+        <div class='wrapper'>
+          <div class='visible'>
+            <ul class='hamburger'>
+              <li class='hamburgerli'></li>
+              <li class='hamburgerli'></li>
+              <li class='hamburgerli'></li>
+            </ul>
+          </div>
+          <div class='hidden'>
+            <ul class='box'>
+              <li><a class='boxli' href="#">Home</a></li>
+              <li><a class='boxli' href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header> -->
+    <!-- Desktop View Nav -->
+    <header id="home" class="mainheader">
+        <nav class="topnav">
+          <a class="active" href=#>Home</a>
+          <a class="active" href=#>About Us</a>
+        </nav>
+        <!--<h6 class="h6main">Easteros The Game</h6> -->
+      </header>
+    <!-- Main -->
+    <main>
+      <!-- Error View Container -->
+      <!-- <section class="error-view container">
+        <h2>There be an issue, cap'n</h2>
+        <section id="error-message"></section>
+      </section> -->
+      <!-- Main View Container -->
+      <section class="main-view container">
+        <button type="button" class="button1">First</button>
+        <button type="button" class="button2">Second</button>
+        <button type="button" class="button3">Third</button>
+      </section>
+      <!-- First View Container -->
+      <section class="first-view container">
+      </section>
+       <!-- Second View Container -->
+       <section class="second-view container">
+      </section>
+       <!-- Third View Container -->
+       <section class="third-view container">
+      </section>
+    </main>
+    <footer>
+      <!-- Soical Icons -->
+      <!-- <aside class="social-links">
+        <ul>
+          <li><i class="icon-mail2"><a href=""></a></i></li>
+          <li><i class="icon-twitter"><a href=""></a></i></li>
+          <li><i class="icon-github"><a href=""></a></i></li>
+          <li><i class="icon-linkedin2"><a href=""></a></i></li>
+        </ul>
+      </aside> -->
+    </footer>
+    <!-- External CDN Resources -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <!-- App Resources -->
+    <script src="scripts/models/app.js"></script>
+    <script src="scripts/views/page-view.js"></script>
+    <script src="scripts/views/error-view.js"></script>
+    <script src="scripts/views/routes.js"></script>
+    <script src="scripts/views/menu.js"></script>
   </body>
 </html>
