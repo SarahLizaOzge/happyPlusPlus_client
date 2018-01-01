@@ -45,8 +45,8 @@
         <nav class="topnav">
           <a class="active" href=#>Home</a>
           <a class="active" href=#>About Us</a>
+          <a class="active" href="/user">Log In</a>
         </nav>
-        <!--<h6 class="h6main">Easteros The Game</h6> -->
       </header>
     <!-- Main -->
     <main>
@@ -72,6 +72,17 @@
        <!-- Third View Container -->
        <section class="third-view container">
           <section id="third-view"></section>
+      </section>
+      <!-- User Container -->
+      <section class="user-view container">
+              <h1>Add user</h1>
+              <form action="/" id="bookform" method="post">
+                  <input placeholder="username" name="username" id="username" type="text" required></br>
+                  <input placeholder="password" name="password" id="password" type="password" required></br>
+                  <input placeholder="email" name="email" id="email" type="text" required></br>
+                  <button type="submit" id="add-user">Submit</button>
+              </form>
+            </section>
       </section>
     </main>
     <footer>
