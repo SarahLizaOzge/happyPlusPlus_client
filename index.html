@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Happy++</title>
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/icons.css">
+    <!-- <link rel="stylesheet" href="styles/icons.css"> -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -64,10 +64,10 @@
     <!-- Main -->
     <main>
       <!-- Error View Container -->
-      <!-- <section class="error-view container">
+      <section class="error-view container">
         <h2>There be an issue, cap'n</h2>
         <section id="error-message"></section>
-      </section> -->
+      </section>
       <!-- Main View Container -->
       <section class="main-view container">
         <button type="button" class="button1"><a href="/first">First</a></button>
@@ -90,9 +90,9 @@
       <section class="user-view container">
               <h1>SignUp</h1>
               <form id="user-form" method="post">
-                  <input placeholder="username" name="username" id="username" type="text" required></br>
-                  <input placeholder="password" name="password" id="password" type="password" required></br>
-                  <input placeholder="email" name="email" id="email" type="text" required></br>
+                  <input placeholder="username" name="username" class="username" type="text" required></br>
+                  <input placeholder="password" name="password" class="password" type="password" required></br>
+                  <input placeholder="email" name="email" class="email" type="text" required></br>
                   <button type="submit" id="add-user">SignUp</button>
               </form>
       </section>
@@ -100,8 +100,8 @@
       <section class="user-login-view container">
           <h1>Login</h1>
           <form id="user-login-form" method="post">
-              <input placeholder="username" name="username" id="username" type="text" required></br>
-              <input placeholder="password" name="password" id="password" type="password" required></br>
+              <input placeholder="username" name="username" class="username" type="text" required></br>
+              <input placeholder="password" name="password" class="password" type="password" required></br>
               <button type="submit" id="login">Login</button>
           </form>
       </section>
@@ -110,9 +110,9 @@
           <h1>Update user</h1>
           <form action="/" id="update-user-form" method="put">
             <label>username:</label>
-            <input placeholder="username" name="username" id="username" type="text" required></br>
+            <input placeholder="username" name="username" class="username" type="text" required></br>
             <label>email:</label>
-            <input placeholder="email" name="email" id="email" type="text" required></br>
+            <input placeholder="email" name="email" class="email" type="text" required></br>
             <button type="submit" id="update-user">Update</button>
           </form>
           <p id = "update-message"></p>
@@ -122,9 +122,9 @@
         <h1>Delete user</h1>
         <form action="/" id="delete-user-form" method="delete">
           <label>username:</label>
-          <input placeholder="username" name="username" id="username" type="text" required></br>
+          <input placeholder="username" name="username" class="username" type="text" required></br>
           <label>email:</label>
-          <input placeholder="email" name="email" id="email" type="text" required></br>
+          <input placeholder="email" name="email" class="email" type="text" required></br>
           <button type="submit" id="delete-user">Delete</button>
         </form>
     </section>
