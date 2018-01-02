@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Happy++</title>
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/icons.css">
+    <!-- <link rel="stylesheet" href="styles/icons.css"> -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -21,6 +21,15 @@
     <h3 id="video-title">{{title}}</h3>
     <iframe id="video-player" width="560" height="315" src="https://www.youtube.com/embed/{{videoId}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
     <p id="video-description">{{description}}
+  </script>
+  </head>
+ <!-- Users Handlebars Template -->
+  <script id="user-view-template" type="text/x-handlebarse-template">
+    <div class="user-container">
+        <p>{{username}}</p>
+        <p>{{email}}</p>
+        <button class="user" type="button"  id={{user_id}}><a href="/users/{{user_id}}/update">Update</a></button>
+      </div>
   </script>
   </head>
   <body>
@@ -49,21 +58,25 @@
         <nav class="topnav">
           <a class="active" href=#>Home</a>
           <a class="active" href=#>About Us</a>
+          <a class="active" href="/user" id= "user-login">SignUp</a>
+          <a class="active" href="/users/login" id= "login">Login</a>
+          <a class="active" href="/users/update" id= "users-update">update</a>
+          <a class="active" href="/users/delete" id="users-delete">delete</a>
+          <!-- <button type="button" class="userbutton"><a href="/user">Sign Up</a></button> -->
         </nav>
-        <!--<h6 class="h6main">Easteros The Game</h6> -->
       </header>
     <!-- Main -->
     <main>
       <!-- Error View Container -->
-      <!-- <section class="error-view container">
+      <section class="error-view container">
         <h2>There be an issue, cap'n</h2>
         <section id="error-message"></section>
-      </section> -->
+      </section>
       <!-- Main View Container -->
       <section class="main-view container">
         <button type="button" class="button1"><a href="/first">First</a></button>
-        <button type="button" class="button2">Second</button>
-        <button type="button" class="button3">Third</button>
+        <button type="button" class="button2"><a href="/second">Second</a></button>
+        <button type="button" class="button3"><a href="/third">Third</a></button>
       </section>
       <!-- First View Container -->
       <section class="first-view container">
@@ -72,10 +85,54 @@
       </section>
        <!-- Second View Container -->
        <section class="second-view container">
+          <section id="second-view"></section>
       </section>
        <!-- Third View Container -->
        <section class="third-view container">
+          <section id="third-view"></section>
       </section>
+      <!-- Form Container -->
+      <section class="user-view container">
+              <h1>SignUp</h1>
+              <form id="user-form" method="post">
+                  <input placeholder="username" name="username" class="username" type="text" required></br>
+                  <input placeholder="password" name="password" class="password" type="password" required></br>
+                  <input placeholder="email" name="email" class="email" type="text" required></br>
+                  <button type="submit" id="add-user">SignUp</button>
+              </form>
+      </section>
+      <!-- Login Container -->
+      <section class="user-login-view container">
+          <h1>Login</h1>
+          <form id="user-login-form" method="post">
+              <input placeholder="username" name="username" class="username" type="text" required></br>
+              <input placeholder="password" name="password" class="password" type="password" required></br>
+              <button type="submit" id="login">Login</button>
+          </form>
+      </section>
+      <!-- Update Container -->
+      <section class="update-user-view container">
+          <h1>Update user</h1>
+          <form action="/" id="update-user-form" method="put">
+            <label>username:</label>
+            <input placeholder="username" name="username" class="username" type="text" required></br>
+            <label>email:</label>
+            <input placeholder="email" name="email" class="email" type="text" required></br>
+            <button type="submit" id="update-user">Update</button>
+          </form>
+          <p id = "update-message"></p>
+      </section>
+      <!-- Delete Container -->
+      <section class="delete-user-view container">
+        <h1>Delete user</h1>
+        <form action="/" id="delete-user-form" method="delete">
+          <label>username:</label>
+          <input placeholder="username" name="username" class="username" type="text" required></br>
+          <label>email:</label>
+          <input placeholder="email" name="email" class="email" type="text" required></br>
+          <button type="submit" id="delete-user">Delete</button>
+        </form>
+    </section>
     </main>
     <footer>
       <!-- Soical Icons -->
