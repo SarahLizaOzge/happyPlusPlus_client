@@ -11,4 +11,24 @@ var app = app || {};
     console.error(err);
     module.errorView.initErrorPage(err);
   }
+
+  function User(rawUserObj) {
+    Object.keys(rawUserObj).map(key => this[key] = rawUserObj[key]);
+  };
+
+  User.prototype.toHtml = function(templateId) {
+    return Handlebars.compile($(`#${templateId}`).text())(this);
+  };
+
+  User.all = [];
+
+  User.loadAll = rows => User.all = rows.sort((a, b) => a.title - b.title).map(user => new User(user));
+  User.create = user => {
+    $.post(`${__API_URL__}/api/v1/users`, user)
+      .then(()=> page('/'));
+  };
+
+
+
+  module.User = User;
 })(app);

@@ -62,19 +62,10 @@ var app = app || {};
   };
 
   pageView.loginPage = () => {
-    // Hide the hideSelector if one was provided
-    // $('.container').hide();
-    // Empty out the emptySelector if one was provided
-    //$('ADD ID/CLASS').empty();
-    // Show the showSelector if one was provided
     console.log('you are in login page');
     $('#user-login').on('click', function() {
       console.log('you are in function');
       $('.user-view').show();
-      // pageView.initAddUserPage();
-      // $('.container').hide();
-      // let template = Handlebars.compile($('.user-view-template').text());
-      // $('#third-view').append(template());
     });
   };
   
@@ -82,18 +73,19 @@ var app = app || {};
     $('.user-view').show();
     $('#user-form').show();
     $('.main-view').hide();
+    $('#user-form').on('submit', module.pageView.submit);
   };
 
 
-  // pageView.submit = event => {
-  //   event.preventDefault();
-  //   let user = {
-  //     username: event.target.username.value,
-  //     password: event.target.password.value,
-  //     email: event.target.email.value,
-  //   };
-  //   module.User.create(user);
-  // };
+  pageView.submit = event => {
+    event.preventDefault();
+    let user = {
+      username: event.target.username.value,
+      password: event.target.password.value,
+      email: event.target.email.value,
+    };
+    module.User.create(user);
+  };
 
 
 
