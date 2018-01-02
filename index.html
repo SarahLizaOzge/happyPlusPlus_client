@@ -54,9 +54,10 @@
         <nav class="topnav">
           <a class="active" href=#>Home</a>
           <a class="active" href=#>About Us</a>
-          <a class="active" href="/user" id= "user-login">SignUp</a> 
-          <a class="active" href="/users/login" id= "login">Login</a> 
-          <a class="active" href="/users/update" id= "users-update">update</a> 
+          <a class="active" href="/user" id= "user-login">SignUp</a>
+          <a class="active" href="/users/login" id= "login">Login</a>
+          <a class="active" href="/users/update" id= "users-update">update</a>
+          <a class="active" href="/users/delete" id="users-delete">delete</a>
           <!-- <button type="button" class="userbutton"><a href="/user">Sign Up</a></button> -->
         </nav>
       </header>
@@ -85,7 +86,7 @@
        <section class="third-view container">
           <section id="third-view"></section>
       </section>
-      <!-- User Container -->
+      <!-- Form Container -->
       <section class="user-view container">
               <h1>SignUp</h1>
               <form id="user-form" method="post">
@@ -95,6 +96,7 @@
                   <button type="submit" id="add-user">SignUp</button>
               </form>
       </section>
+      <!-- Login Container -->
       <section class="user-login-view container">
           <h1>Login</h1>
           <form id="user-login-form" method="post">
@@ -102,7 +104,8 @@
               <input placeholder="password" name="password" id="password" type="password" required></br>
               <button type="submit" id="login">Login</button>
           </form>
-  </section>
+      </section>
+      <!-- Update Container -->
       <section class="update-user-view container">
           <h1>Update user</h1>
           <form action="/" id="update-user-form" method="put">
@@ -111,6 +114,7 @@
             <label>email:</label>
             <input placeholder="email" name="email" id="email" type="text" required></br>
             <button type="submit" id="update-user">Update</button>
+            <button type="submit" id="delete-user">Delete</button>
           </form>
           <p id = "update-message"></p>
       </section>

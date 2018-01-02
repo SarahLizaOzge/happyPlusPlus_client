@@ -67,7 +67,7 @@ var app = app || {};
     $('#user-form').show();
     $('#user-form').on('submit', module.pageView.submit);
   };
-  
+
   pageView.submit = event => {
     event.preventDefault();
     let user = {
@@ -103,16 +103,9 @@ var app = app || {};
       let username = localStorage.username;
       module.User.update(username, userdata);
     });
+    $('#delete-user').on('click', function() {
+      module.User.destroy($(this).data('username'));
+    });
   };
-
-  // function validate(){
-   
-  //   if ( username == "Formget" && password == "formget#123"){
-  //   alert ("Login successfully");
-  //   window.location = "success.html"; // Redirecting to other page.
-  //   return false;
-  //   }
-
-
   module.pageView=pageView;
 })(app);
