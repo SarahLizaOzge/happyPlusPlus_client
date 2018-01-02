@@ -11,7 +11,7 @@ var app = app || {};
     // Hide the hideSelector if one was provided
     $('.container').hide();
     // Empty out the emptySelector if one was provided
-    //$('ADD ID/CLASS').empty();
+    $('#main-view').empty();
     // Show the showSelector if one was provided
     $('.main-view').show();
   };
