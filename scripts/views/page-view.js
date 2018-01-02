@@ -23,11 +23,14 @@ var app = app || {};
     //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
     console.log('you are in firstPage');
+    $('.first-view').show();
+    app.getVideos();
+    //module.allVideos.map(video=> $('#first-view').append(video.toHtml()));
+    // let template = Handlebars.compile($('.video-view-template').text());
+    // $('#first-view').append(template(app.allVideos));
+
     $('.button1').on('click', function() {
       $('.container').hide();
-      $('.first-view').show();
-      // let template = Handlebars.compile($('.video-view-template').text());
-      // $('#first-view').append(template());
     });
   };
 
