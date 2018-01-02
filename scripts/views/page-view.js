@@ -103,9 +103,31 @@ var app = app || {};
       let username = localStorage.username;
       module.User.update(username, userdata);
     });
-    $('#delete-user').on('click', function() {
-      module.User.destroy($(this).data('username'));
-    });
+
   };
+  pageView.initDeleteUser = (ctx) => {
+    $('.container').hide();
+    $('.delete-user-view').show();
+    $('#delete-user-form').show();
+    $('#delete-user-form input[name="email"]').val(ctx.user.email);
+    $('#delete-user-form input[name="username"]').val(ctx.user.username);
+
+    $('#delete-user-form').on('submit', function(event) {
+      event.preventDefault();
+      let userdata= {
+        email: event.target.email.value,
+      };
+      let username = localStorage.username;
+      module.User.destroy(username, userdata);
+      // // $('#delete-user').on('click', function() {
+      // //   console.log('user deleted');
+      // //   module.User.destroy($(username ,userdata));
+      // });
+    });
+
+
+  };
+
+
   module.pageView=pageView;
 })(app);
