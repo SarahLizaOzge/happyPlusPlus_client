@@ -5,6 +5,7 @@ var app = app || {};
 (function (module){
   var __API_URL__ = 'http://localhost:3000';
   //var __API_URL__ = 'https://sb-lo-ob-happyplusplus.herokuapp.com';
+  User.all = [];
 
   // Still need to add .catch and pass through this function, example: .catch(errorCallback)
   function errorCallback(err) {
@@ -47,7 +48,7 @@ var app = app || {};
         localStorage.loggedin = true;
         localStorage.username = username;
         $('#users-update').show();
-        
+        $('#users-delete').show();
       },
       error: function(){
         localStorage.loggedin = false;
@@ -72,7 +73,15 @@ var app = app || {};
       .catch(errorCallback);
   };
 
-
+  User.destroy = (username, userdata) => {
+    $.ajax({
+      url: `${__API_URL__}/api/v1/users/${username}`,
+      method: 'DELETE',
+      data: userdata,
+    })
+      .then(() => page('/'))
+      .catch(console.error);
+  };
 
   module.User = User;
 })(app);
