@@ -1,5 +1,7 @@
 'use strict';
 
+if (window.location.pathname !== '/') page.base('/happyPlusPlus_client');
+
 page('/', () => app.pageView.initIndexPage());
 page('/first', () => app.pageView.firstPage());
 page('/second', () => app.pageView.secondPage());
