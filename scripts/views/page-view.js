@@ -26,8 +26,8 @@ var app = app || {};
     $('.button1').on('click', function() {
       $('.container').hide();
       $('.first-view').show();
-      let template = Handlebars.compile($('.video-view-template').text());
-      $('#first-view').append(template());
+      // let template = Handlebars.compile($('.video-view-template').text());
+      // $('#first-view').append(template());
     });
   };
 
