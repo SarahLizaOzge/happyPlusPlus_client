@@ -3,15 +3,15 @@
 var app = app || {};
 
 (function (module){
-  //var __API_URL__ = 'http://localhost:3000';
-  var __API_URL__ = 'https://sb-lo-ob-happyplusplus.herokuapp.com';
+  //var __API_URL__ = 'http://localhost:3000/happyPlusPlus_client';
+  var __API_URL__ = 'https://sb-lo-ob-happyplusplus.herokuapp.com/happyPlusPlus_client';
 
 
   function errorCallback(err) {
     console.error(err);
     module.errorView.initErrorPage(err);
   }
-    function Video(rawVideoObj) {
+  function Video(rawVideoObj) {
     Object.keys(rawVideoObj).forEach(key => this[key] = rawVideoObj[key]);
   }
 
@@ -57,7 +57,7 @@ var app = app || {};
 
   function User(rawUserObj) {
     Object.keys(rawUserObj).map(key => this[key] = rawUserObj[key]);
-  };
+  }
 
   User.prototype.toHtml = function(templateId) {
     return Handlebars.compile($(`#${templateId}`).text())(this);
