@@ -15,8 +15,12 @@
     <p>{{status}}: {{statusTest}}</p>
   </script>
   <!-- Pages Handlebars Template -->
+
   <script id="video-view-template" type="text/x-handlebarse-template">
-    <h3>now your in container</h3>
+    <h3>now your in Motivation Container</h3>
+    <h3 id="video-title">{{title}}</h3>
+    <iframe id="video-player" width="560" height="315" src="https://www.youtube.com/embed/{{videoId}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    <p id="video-description">{{description}}
   </script>
   </head>
  <!-- Users Handlebars Template -->
@@ -76,6 +80,7 @@
       </section>
       <!-- First View Container -->
       <section class="first-view container">
+        <p>YOUR IN FIRST VIEW</p>
           <section id="first-view"></section>
       </section>
        <!-- Second View Container -->
