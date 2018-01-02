@@ -4,7 +4,7 @@ var app = app || {};
 
 (function (module){
   //var __API_URL__ = 'http://localhost:3000/happyPlusPlus_client';
-  var __API_URL__ = 'https://sb-lo-ob-happyplusplus.herokuapp.com/happyPlusPlus_client';
+  var __API_URL__ = 'http://sb-lo-ob-happyplusplus.herokuapp.com/happyPlusPlus_client';
 
 
   function errorCallback(err) {
