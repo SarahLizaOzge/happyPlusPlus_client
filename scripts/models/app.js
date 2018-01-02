@@ -6,7 +6,6 @@ var app = app || {};
   var __API_URL__ = 'http://localhost:3000';
   //var __API_URL__ = 'https://sb-lo-ob-happyplusplus.herokuapp.com';
 
-  // Still need to add .catch and pass through this function, example: .catch(errorCallback)
   function errorCallback(err) {
     console.error(err);
     module.errorView.initErrorPage(err);
@@ -31,7 +30,8 @@ var app = app || {};
 
   User.create = user => {
     $.post(`${__API_URL__}/api/v1/users`, user)
-      .then(()=> page('/'));
+      .then(()=> page('/'))
+      .catch(errorCallback);
   };
 
   User.checkLogin = (username, password) => {
@@ -52,10 +52,11 @@ var app = app || {};
       error: function(){
         localStorage.loggedin = false;
         localStorage.username = undefined;
-        console.log('CANNOT LOGIN');
+        // console.log('CANNOT LOGIN');
       },
     })
-      .then(() => page('/'));
+      .then(() => page('/'))
+      .catch(errorCallback);
   };
 
   User.update = (username, userdata) =>{
@@ -79,7 +80,7 @@ var app = app || {};
       data: userdata,
     })
       .then(() => page('/'))
-      .catch(console.error);
+      .catch(errorCallback);
   };
 
   module.User = User;

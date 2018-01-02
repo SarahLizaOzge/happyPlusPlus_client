@@ -119,15 +119,7 @@ var app = app || {};
       };
       let username = localStorage.username;
       module.User.destroy(username, userdata);
-      // // $('#delete-user').on('click', function() {
-      // //   console.log('user deleted');
-      // //   module.User.destroy($(username ,userdata));
-      // });
     });
-
-
   };
-
-
   module.pageView=pageView;
 })(app);
