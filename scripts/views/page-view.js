@@ -61,22 +61,13 @@ var app = app || {};
     });
   };
 
-  pageView.loginPage = () => {
-    console.log('you are in login page');
-    $('#user-login').on('click', function() {
-      console.log('you are in function');
-      $('.user-view').show();
-    });
-  };
-  
-  pageView.initAddUserPage = () => {
+  pageView.signUpPage = () => {
+    $('.container').hide();
     $('.user-view').show();
     $('#user-form').show();
-    $('.main-view').hide();
     $('#user-form').on('submit', module.pageView.submit);
   };
-
-
+  
   pageView.submit = event => {
     event.preventDefault();
     let user = {
@@ -87,7 +78,40 @@ var app = app || {};
     module.User.create(user);
   };
 
+  pageView.initLoginPage = (ctx) =>{
+    $('.container').hide();
+    $('.user-login-view').show();
+    $('#user-login-form').show();
+    $('#user-login-form').on('submit', function(event){
+      event.preventDefault();
+      module.User.checkLogin(event.target.username.value, event.target.password.value);
+    });
+  };
 
+  pageView.initUpdateUser = (ctx) => {
+    $('.container').hide();
+    $('.update-user-view').show();
+    $('#update-user-form').show();
+    $('#update-user-form input[name="email"]').val(ctx.user.email);
+    $('#update-user-form input[name="username"]').val(ctx.user.username);
+
+    $('#update-user-form').on('submit', function(event) {
+      event.preventDefault();
+      let userdata= {
+        email: event.target.email.value,
+      };
+      let username = localStorage.username;
+      module.User.update(username, userdata);
+    });
+  };
+
+  // function validate(){
+   
+  //   if ( username == "Formget" && password == "formget#123"){
+  //   alert ("Login successfully");
+  //   window.location = "success.html"; // Redirecting to other page.
+  //   return false;
+  //   }
 
 
   module.pageView=pageView;
