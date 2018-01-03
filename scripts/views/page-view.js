@@ -25,7 +25,8 @@ var app = app || {};
 
     console.log('you are in firstPage');
     $('.first-view').show();
-    app.getVideos(`motivation+ted+talk`,`#first-view`, 'motivation-video');
+    app.getVideos(`motivation+ted+talk`,`.first-view`, 'motivation-video');
+
     // $('.button1').on('click', function() {
     //   $('.container').hide();
     // });

@@ -18,9 +18,11 @@
 
   <script id="video-view-template" type="text/x-handlebarse-template">
     <h3>now your in Motivation Container</h3>
-    <h3 id="video-title">{{title}}</h3>
-    <iframe id="video-player" width="560" height="315" src="https://www.youtube.com/embed/{{videoId}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-    <p id="video-description">{{description}}
+    {{#each this}}
+    <h3 id="video-title">{{snippet.title}}</h3>
+    <iframe id="video-player" width="560" height="315" src="https://www.youtube.com/embed/{{id.videoId}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    <p id="video-description">{{snippet.description}}
+      {{/each}}
   </script>
   </head>
  <!-- Users Handlebars Template -->

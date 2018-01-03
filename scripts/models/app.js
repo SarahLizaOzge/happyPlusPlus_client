@@ -15,19 +15,26 @@ var app = app || {};
     Object.keys(rawVideoObj).forEach(key => this[key] = rawVideoObj[key]);
   }
 
-  Video.prototype.toHtml = function() {
-    let template = Handlebars.compile($('.video-view-template').text());
-    return template(this);
+  Video.prototype.toHtml = function(selector) {
+    var theTemplateScript = $("#video-view-template").html();
+    var theTemplate = Handlebars.compile(theTemplateScript);
+    $(selector).append(theTemplate(app.allVideos)); 
+
+    // return Handlebars.compile($('.video-view-template').text())(this);
+    // // let template = Handlebars.compile($('.video-view-template').text());
+    // // console.log(this);
+    // // return template(this);
   };
-  Video.all = [];
-  Video.loadAll = items => Video.all = items;
+
+  // Video.all = [];
+  // Video.loadAll = items => Video.all = items;
 
   module.allVideos=[];
 
   // module.rawVideos = $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=motivation+ted+talk&type=video&videoDefinition=high`);
 
   // module.rawVideos.responseJSON.items.map(ele => module.allVideos.push(new Video(ele)));
-
+  
   module.getVideos = (query, domEle, styleId) => {
 
     $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high`)
