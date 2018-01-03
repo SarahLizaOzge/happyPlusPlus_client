@@ -23,10 +23,12 @@
   <script type="text/x-handlebars-template" id="video-view-template">
     <li class="video-item" data-video-id={{id.videoId}}>
       <div class="video-container">
-        <iframe id="video-{{id.videoId}}" width= "560" height= "315" src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
+         <iframe id="video-{{id.videoId}}" width= "560" height= "315" src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
         </iframe>
         <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
       </div>
+              <h1>{{snippet.title}}</h1>
+              <p>{{snippet.description}}</p>
     </li>
   </script>
 
@@ -99,7 +101,7 @@
         </div>
 
         <div id=image-container class="left">
-        <a class="button4" href="/"><img src="fit.jpg" class="left">
+        <a class="button4" href="/fourth"><img src="fit.jpg" class="left">
           <div class="caption4">
               <p class="largefont">NEVER GIVE UP</p>
               <p class="smallfont">Kick Ass</p>
@@ -123,6 +125,10 @@
        <section class="third-view container">
           <div class="loader loader-curtain3 is-active"></div>
           <section id="third-view"></section>
+      </section>
+      <!-- Third View Container -->
+      <section class="fourth-view container">
+        <section id="fourth-view"></section>
       </section>
       <!-- User Favorites List View Container -->
       <section class="favorite-view container">
