@@ -25,7 +25,7 @@ var app = app || {};
 
     console.log('you are in firstPage');
     $('.first-view').show();
-    app.getVideos(`motivation+ted+talk`,`#first-view`);
+    app.getVideos(`motivation+ted+talk`,`#first-view`, 'motivation-video');
     // $('.button1').on('click', function() {
     //   $('.container').hide();
     // });
@@ -41,7 +41,7 @@ var app = app || {};
 
     console.log('you are in second page');
     $('.second-view').show();
-    app.getVideos(`beyonce+lemonade`,`#second-view`);
+    app.getVideos(`beyonce+lemonade`,`#second-view`, 'beyonce-video');
     // $('.button2').on('click', function() {
     //   $('.container').hide();
     //   let template = Handlebars.compile($('.video-view-template').text());
@@ -56,7 +56,7 @@ var app = app || {};
     //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
     $('.third-view').show();
-    app.getVideos(`meditation+beach+calm`, `#third-view`);
+    app.getVideos(`meditation+beach+calm`, `#third-view`, 'meditation-video');
     console.log('you are in third page');
     // $('.button3').on('click', function() {
     //   $('.container').hide();

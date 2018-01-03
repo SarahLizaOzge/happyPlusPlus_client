@@ -28,7 +28,7 @@ var app = app || {};
 
   // module.rawVideos.responseJSON.items.map(ele => module.allVideos.push(new Video(ele)));
 
-  module.getVideos = (query, domEle) => {
+  module.getVideos = (query, domEle, styleId) => {
 
     $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high`)
       .then(result => result.items.map(ele => {
@@ -40,7 +40,7 @@ var app = app || {};
         console.log(ele, 'ele is whu');
         $('<iframe />', {
           name: 'myFrame',
-          id: 'myFrame',
+          id: styleId,
           width: '560',
           height: '315',
           src: `https://www.youtube.com/embed/${ele.id.videoId}`,
