@@ -57,7 +57,7 @@ var app = app || {};
     //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
     $('.third-view').show();
-    app.getVideos(`meditation+beach+calm`, `#third-view`, 'meditation-video');
+    app.getVideos(`moving+art`, `#third-view`, 'meditation-video');
     console.log('you are in third page');
     // $('.button3').on('click', function() {
     //   $('.container').hide();
