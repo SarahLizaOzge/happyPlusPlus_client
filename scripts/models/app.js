@@ -28,6 +28,28 @@ var app = app || {};
   // module.rawVideos = $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=motivation+ted+talk&type=video&videoDefinition=high`);
 
   // module.rawVideos.responseJSON.items.map(ele => module.allVideos.push(new Video(ele)));
+  /////////////////////////////////////////////////////////////////////////////////
+  function Favideo(rawFavideoObj) {
+    Object.keys(rawFavideoObj).map(key => this[key] = rawFavideoObj[key]);
+  }
+
+  Favideo.prototype.toHtml = function() {
+    let template = Handlebars.compile($('#favorite-list-template').text());
+    return template(this);
+  };
+
+  Favideo.all = [];
+  Favideo.loadAll = rows => Favideo.all = rows.sort((a, b) => a.video_url - b.video_url).map(favideo => new Favideo(favideo));
+  Favideo.fetchAll = callback => {
+    $.get(`${__API_URL__}/api/v1/addToFavorites`)
+      .then(Favideo.loadAll)
+      .then(callback)
+      .catch(errorCallback);
+  };
+
+
+  //////////////////////////////////////////////////////////////////////////////////
+
 
 
   module.getVideos = callback => {
@@ -125,5 +147,6 @@ var app = app || {};
     })
       .catch(errorCallback);
   };
+  module.Favideo = Favideo;
   module.User = User;
 })(app);

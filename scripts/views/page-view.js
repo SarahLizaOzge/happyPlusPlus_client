@@ -65,6 +65,7 @@ var app = app || {};
     // Show the showSelector if one was provided
     console.log('This is the list of favorite videos');
     $('.favorite-view').show();
+    module.Favideo.all.map(favideo => $('#fav-list').append(favideo.toHtml('favorite-list-template')));
   };
 
   pageView.initSignUpPage = () => {

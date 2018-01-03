@@ -27,6 +27,16 @@
     </li>
   </script>
 
+  <script type="text/x-handlebars-template" id="favorite-list-template">
+    <li class="favoriteVideo-item"  data-video-id={{id.videoId}}>
+      <div class="favorite-video-container">
+        <div>
+          <h2>{{video_url}</h2>
+        </div>
+      </div>
+    </li>
+  </script>
+
 
   <!-- <script id="video-view-template" type="text/x-handlebarse-template">
     <h3>{{page_title}}</h3>
@@ -107,7 +117,9 @@
       </section>
       <!-- User Favorites List View Container -->
       <section class="favorite-view container">
-        <section id="favorite-view"></section>
+        <section id="favorite-view">
+          <ul id="fav-list"></ul>  
+        </section>
       </section>
       <!-- Form Container -->
       <section class="user-view container">
