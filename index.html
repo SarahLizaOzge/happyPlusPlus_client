@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Happy++</title>
     <link rel="stylesheet" href="styles/reset.css">
-    <!-- <link rel="stylesheet" href="styles/icons.css"> -->
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/loader.css">
     <link rel="stylesheet" href="styles/base.css">
     <!-- <link rel="stylesheet" href="styles/layout.css"> -->
@@ -23,9 +23,13 @@
   <script type="text/x-handlebars-template" id="video-view-template">
     <li class="video-item" data-video-id={{id.videoId}}>
       <div class="video-container">
-         <iframe id="video-{{id.videoId}}" width= "560" height= "315" src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
+         <iframe id="video-{{id.videoId}}"  src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
         </iframe>
+  
         <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
+              <label class="label-favorite" for="{{index}}">
+                <div class="entypo-heart"></div>
+              </label>
       </div>
               <h1>{{snippet.title}}</h1>
               <p>{{snippet.description}}</p>
