@@ -23,6 +23,9 @@ var app = app || {};
     $('.first-view').show();
     app.allVideos.map(video => $('#first-view').append(video.toHtml()));
     console.log(app.allVideos[0]);
+    app.allVideos = [];
+    console.log(app.allVideos);
+
     $('.favorite-button').on('click', function(){
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
