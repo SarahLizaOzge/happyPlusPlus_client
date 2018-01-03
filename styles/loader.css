@@ -79,7 +79,7 @@
 
 /* Loader for third page */
 
-.loader-curtain2:after,.loader-curtain2:before{
+.loader-curtain3:after,.loader-curtain2:before{
   position:fixed;
   width:100%;
   top:50%;
@@ -92,11 +92,11 @@
   content:"The most difficult thing is the decision to act, the rest is merely tenacity. —Amelia Earhart"
 }
 
-.loader-curtain2:before{
+.loader-curtain3:before{
   color:rgb(238, 238, 238);
 }
 
-.loader-curtain2:after{
+.loader-curtain3:after{
   color:#fff;
   height:0;
   animation:curtain 1s linear infinite alternate both
@@ -104,7 +104,7 @@
 
 /* Loader for fourth page */
 
-.loader-curtain2:after,.loader-curtain2:before{
+.loader-curtain4:after,.loader-curtain2:before{
   position:fixed;
   width:100%;
   top:50%;
@@ -117,11 +117,11 @@
   content:"add quote"
 }
 
-.loader-curtain2:before{
+.loader-curtain4:before{
   color:rgb(238, 238, 238);
 }
 
-.loader-curtain2:after{
+.loader-curtain4:after{
   color:#fff;
   height:0;
   animation:curtain 1s linear infinite alternate both
