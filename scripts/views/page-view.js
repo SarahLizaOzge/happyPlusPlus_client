@@ -30,6 +30,7 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
+    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 2000);
   };
 
   pageView.secondPage = () => {
