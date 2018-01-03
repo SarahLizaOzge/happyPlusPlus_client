@@ -69,46 +69,55 @@ button {
   font-size: 2vw;
   border-radius: 3%;
   display: block;
-  width: 50%;
+  width: 20%;
+  background: linear-gradient(to bottom left,mediumorchid, lightskyblue);
+  margin: 0 auto;
 }
 
-a {
+/* a {
   color: white;
   text-decoration: none;
+} */
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .button1 {
-  background-color: black;
-  margin: .5% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* margin: .1% auto; */
 }
 
-.button2 {
-  background-color: black;
-  margin: .5% auto;
+/* .button2 {
+  margin: 0 auto;
 }
 
 .button3 {
-  background-color: black;
-  margin: .5% auto;
-}
+  margin: 0 auto;
+} */
 
 /* desktop nav */
 
 .topnav {
   overflow: hidden;
-  background: linear-gradient(to bottom right, cadetblue, lightcyan);
+  background: linear-gradient(to bottom right, black, rgb(80, 77, 77));
+  opacity: .7;
   position: relative;
   background-position: center;
   top: 0%;
   width: 100%;
   right: .1%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
 }
 
 .topnav a {
   display: inline;
-  color: black;
+  color: white;
   text-align: left;
   padding: 14px 16px;
   text-decoration: none;
@@ -117,9 +126,9 @@ a {
 }
 
 .topnav a:hover {
-  background-color: lightcyan;
-  opacity: .;
-  color: black;
+  background-color: rgb(80, 77, 77);
+  opacity: .7;
+  color: white;
 }
 
 /* end desktop nav, move to @media at some point */
@@ -128,7 +137,7 @@ a {
 
 /* desktop nav */
 
-.button1 {
+/* .button1 {
   background: linear-gradient(to bottom right, crimson, lightsalmon);
   margin: 3% auto;
   padding: 5%;
@@ -145,4 +154,4 @@ a {
   margin: 3% auto;
   padding: 5%;
 
-}
+} */
