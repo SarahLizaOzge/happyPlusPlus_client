@@ -5,11 +5,13 @@
     <title>Happy++</title>
     <link rel="stylesheet" href="styles/reset.css">
     <!-- <link rel="stylesheet" href="styles/icons.css"> -->
+    <link rel="stylesheet" href="styles/loader.css">
     <link rel="stylesheet" href="styles/base.css">
     <!-- <link rel="stylesheet" href="styles/layout.css"> -->
     <link rel="stylesheet" href="styles/layout2.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
   <!-- Error Handlebars Template -->
   <script id="error-template" type="text/x-handlebarse-template">
     <h3>Uh oh! There was an error!!</h3>
@@ -108,6 +110,8 @@
       </section>
       <!-- First View Container -->
       <section class="first-view container">
+        <div class="loader loader-curtain is-active"></div>
+        <!-- here's my fun little function that works with the above div: var intervalID = setTimeout(function() { ($( ".is-active"  ).fadeOut("slow")); }, 2000); -->
         <p>YOUR IN FIRST VIEW</p>
           <section id="first-view"></section>
       </section>
