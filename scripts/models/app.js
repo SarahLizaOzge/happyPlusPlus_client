@@ -92,6 +92,7 @@ var app = app || {};
         localStorage.username = username;
         $('#users-update').show();
         $('#users-delete').show();
+        $('#users-favorite').show();
       },
       error: function(){
         localStorage.loggedin = false;
