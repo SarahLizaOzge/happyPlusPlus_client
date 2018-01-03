@@ -22,12 +22,13 @@ var app = app || {};
     // Empty out the emptySelector if one was provided
     //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
+
     console.log('you are in firstPage');
     $('.first-view').show();
-    app.getVideos();
-    $('.button1').on('click', function() {
-      $('.container').hide();
-    });
+    app.getVideos(`motivation+ted+talk`,`#first-view`);
+    // $('.button1').on('click', function() {
+    //   $('.container').hide();
+    // });
   };
 
   pageView.secondPage = () => {
@@ -36,13 +37,16 @@ var app = app || {};
     // Empty out the emptySelector if one was provided
     // $('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
+
+
     console.log('you are in second page');
-    $('.button2').on('click', function() {
-      $('.container').hide();
-      $('.second-view').show();
-      let template = Handlebars.compile($('.video-view-template').text());
-      $('#second-view').append(template());
-    });
+    $('.second-view').show();
+    app.getVideos(`beyonce+lemonade`,`#second-view`);
+    // $('.button2').on('click', function() {
+    //   $('.container').hide();
+    //   let template = Handlebars.compile($('.video-view-template').text());
+    //   $('#second-view').append(template());
+    // });
   };
 
   pageView.thirdPage = () => {
@@ -51,13 +55,15 @@ var app = app || {};
     // Empty out the emptySelector if one was provided
     //$('ADD ID/CLASS').empty();
     // Show the showSelector if one was provided
+    $('.third-view').show();
+    app.getVideos(`meditation+beach+calm`, `#third-view`);
     console.log('you are in third page');
-    $('.button3').on('click', function() {
-      $('.container').hide();
-      $('.third-view').show();
-      let template = Handlebars.compile($('.video-view-template').text());
-      $('#third-view').append(template());
-    });
+    // $('.button3').on('click', function() {
+    //   $('.container').hide();
+      
+    //   let template = Handlebars.compile($('.video-view-template').text());
+    //   $('#third-view').append(template());
+    // });
   };
 
   pageView.initFavoritePage = () => {

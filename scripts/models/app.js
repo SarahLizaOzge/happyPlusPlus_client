@@ -28,13 +28,12 @@ var app = app || {};
 
   // module.rawVideos.responseJSON.items.map(ele => module.allVideos.push(new Video(ele)));
 
+  module.getVideos = (query, domEle) => {
 
-  module.getVideos = () => {
-
-    $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=motivation+ted+talk&type=video&videoDefinition=high`)
-      .then(result => result.items.map(ele=> {
+    $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high`)
+      .then(result => result.items.map(ele => {
         console.log(ele.id.videoId);
-        module.allVideos.push(new Video (ele));
+        module.allVideos.push(new Video(ele));
       }))
       // .then(data => console.log('here', data))
       .then(() => module.allVideos.map(ele => {
@@ -49,11 +48,39 @@ var app = app || {};
           allow: 'encrypted-media',
           allowfullscreen: true
 
-        }).appendTo('.first-view');
+        }).appendTo(domEle);
       })
       )
+      .then(module.allVideos=[])
       .catch(errorCallback);
   };
+
+
+  // module.getVideos = () => {
+
+  //   $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=motivation+ted+talk&type=video&videoDefinition=high`)
+  //     .then(result => result.items.map(ele=> {
+  //       console.log(ele.id.videoId);
+  //       module.allVideos.push(new Video (ele));
+  //     }))
+  //     // .then(data => console.log('here', data))
+  //     .then(() => module.allVideos.map(ele => {
+  //       console.log(ele, 'ele is whu');
+  //       $('<iframe />', {
+  //         name: 'myFrame',
+  //         id: 'myFrame',
+  //         width: '560',
+  //         height: '315',
+  //         src: `https://www.youtube.com/embed/${ele.id.videoId}`,
+  //         gesture: 'media',
+  //         allow: 'encrypted-media',
+  //         allowfullscreen: true
+
+  //       }).appendTo('.first-view');
+  //     })
+  //     )
+  //     .catch(errorCallback);
+  // };
 
   function User(rawUserObj) {
     Object.keys(rawUserObj).map(key => this[key] = rawUserObj[key]);
