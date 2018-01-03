@@ -11,12 +11,13 @@ var app = app || {};
     console.error(err);
     module.errorView.initErrorPage(err);
   }
-  function Video(rawVideoObj) {
+  function Video(index, rawVideoObj) {
+    this.index = index;
     Object.keys(rawVideoObj).forEach(key => this[key] = rawVideoObj[key]);
   }
 
   Video.prototype.toHtml = function() {
-    let template = Handlebars.compile($('.video-view-template').text());
+    let template = Handlebars.compile($('#video-view-template').text());
     return template(this);
   };
   Video.all = [];
@@ -29,29 +30,13 @@ var app = app || {};
   // module.rawVideos.responseJSON.items.map(ele => module.allVideos.push(new Video(ele)));
 
 
-  module.getVideos = () => {
-
+  module.getVideos = callback => {
     $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=motivation+ted+talk&type=video&videoDefinition=high`)
-      .then(result => result.items.map(ele=> {
+      .then(result => result.items.map((ele, index)=> {
         console.log(ele.id.videoId);
-        module.allVideos.push(new Video (ele));
+        module.allVideos.push(new Video (index, ele));
       }))
-      // .then(data => console.log('here', data))
-      .then(() => module.allVideos.map(ele => {
-        console.log(ele, 'ele is whu');
-        $('<iframe />', {
-          name: 'myFrame',
-          id: 'myFrame',
-          width: '560',
-          height: '315',
-          src: `https://www.youtube.com/embed/${ele.id.videoId}`,
-          gesture: 'media',
-          allow: 'encrypted-media',
-          allowfullscreen: true
-
-        }).appendTo('.first-view');
-      })
-      )
+      .then(callback)
       .catch(errorCallback);
   };
 
@@ -62,7 +47,6 @@ var app = app || {};
   User.prototype.toHtml = function(templateId) {
     return Handlebars.compile($(`#${templateId}`).text())(this);
   };
-
 
   User.getUserInfo = (ctx, callback) =>{
     let username = localStorage.username;
@@ -127,6 +111,19 @@ var app = app || {};
       .then(() => page('/'))
       .catch(errorCallback);
   };
-
+  module.addToFavorites = (username, video) =>{
+    $.ajax({
+      url:`${__API_URL__}/api/v1/addToFavorites`,
+      method:`POST`,
+      data: {
+        username: username,
+        video_url: `https://www.youtube.com/embed/${video.id.videoId}`,
+        description: video.snippet.description,
+        title: video.snippet.title,
+        videoid: video.id.videoid
+      },
+    })
+      .catch(errorCallback);
+  };
   module.User = User;
 })(app);

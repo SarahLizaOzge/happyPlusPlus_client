@@ -19,14 +19,13 @@ var app = app || {};
   pageView.firstPage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
-    // Empty out the emptySelector if one was provided
-    //$('ADD ID/CLASS').empty();
-    // Show the showSelector if one was provided
     console.log('you are in firstPage');
     $('.first-view').show();
-    app.getVideos();
-    $('.button1').on('click', function() {
-      $('.container').hide();
+    app.allVideos.map(video => $('#first-view').append(video.toHtml()));
+    console.log(app.allVideos[0]);
+    $('.favorite-button').on('click', function(){
+      console.log('button-pressed: ', this.id);
+      app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
   };
 
