@@ -16,21 +16,33 @@
   </script>
   <!-- Pages Handlebars Template -->
 
-  <script id="video-view-template" type="text/x-handlebarse-template">
-    <h3>now your in Motivation Container</h3>
+
+  <script type="text/x-handlebars-template" id="video-view-template">
+    <li class="video-item" data-video-id={{id.videoId}}>
+      <div class="video-container">
+        <iframe id="video-{{id.videoId}}" width= "560" height= "315" src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
+        </iframe>
+        <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
+      </div>
+    </li>
+  </script>
+
+
+  <!-- <script id="video-view-template" type="text/x-handlebarse-template">
+    <h3>{{page_title}}</h3>
     <h3 id="video-title">{{title}}</h3>
     <iframe id="video-player" width="560" height="315" src="https://www.youtube.com/embed/{{videoId}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
     <p id="video-description">{{description}}
-  </script>
-  </head>
+  </script> -->
+
  <!-- Users Handlebars Template -->
-  <script id="user-view-template" type="text/x-handlebarse-template">
+  <!-- <script id="user-view-template" type="text/x-handlebarse-template">
     <div class="user-container">
         <p>{{username}}</p>
         <p>{{email}}</p>
         <button class="user" type="button"  id={{user_id}}><a href="/users/{{user_id}}/update">Update</a></button>
       </div>
-  </script>
+  </script> -->
   </head>
   <body>
     <!-- Hamburger Menu-->

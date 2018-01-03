@@ -3,7 +3,7 @@
 if (window.location.pathname !== '/') page.base('/happyPlusPlus_client');
 
 page('/', () => app.pageView.initIndexPage());
-page('/first', () => app.pageView.firstPage());
+page('/first', () => app.getVideos(() => app.pageView.firstPage()));
 page('/second', () => app.pageView.secondPage());
 page('/third', () => app.pageView.thirdPage());
 page('/user', () => app.pageView.initSignUpPage());
