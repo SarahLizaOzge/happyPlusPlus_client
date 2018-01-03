@@ -67,6 +67,23 @@ var app = app || {};
     setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 2000);
   };
 
+  pageView.fourthPage = () => {
+    // Hide the hideSelector if one was provided
+    $('.container').hide();
+    console.log('you are in fourthPage');
+    $('.fourth-view').show();
+    app.allVideos.map(video => $('#fourth-view').append(video.toHtml()));
+    console.log(app.allVideos[0]);
+    app.allVideos = [];
+    console.log(app.allVideos);
+
+    $('.favorite-button').on('click', function () {
+      console.log('button-pressed: ', this.id);
+      app.addToFavorites(localStorage.username, app.allVideos[this.id]);
+    });
+    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 2000);
+  };
+
   pageView.initFavoritePage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
