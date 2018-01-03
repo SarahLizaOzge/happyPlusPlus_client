@@ -1,6 +1,39 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.959);
+}*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
+/* body {
+    position: relative;
+    width: 100%;
+
+} */
+header, main, sidebar, footer, article, section, div, p {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+   }
+
+main {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+p {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    display: block;
+  }
+
