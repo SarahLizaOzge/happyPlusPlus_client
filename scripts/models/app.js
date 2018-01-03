@@ -37,6 +37,7 @@ var app = app || {};
         module.allVideos.push(new Video (index, ele));
       }))
       .then(callback)
+      .then(module.allVideos=[])
       .catch(errorCallback);
   };
 
