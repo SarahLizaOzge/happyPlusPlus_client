@@ -30,8 +30,8 @@ var app = app || {};
   // module.rawVideos.responseJSON.items.map(ele => module.allVideos.push(new Video(ele)));
 
 
-  module.getVideos = callback => {
-    $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=motivation+ted+talk&type=video&videoDefinition=high`)
+  module.getVideos = (callback, query) => {
+    $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high`)
       .then(result => result.items.map((ele, index)=> {
         console.log(ele.id.videoId);
         module.allVideos.push(new Video (index, ele));

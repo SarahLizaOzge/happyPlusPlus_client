@@ -36,31 +36,35 @@ var app = app || {};
   pageView.secondPage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
-    // Empty out the emptySelector if one was provided
-    // $('ADD ID/CLASS').empty();
-    // Show the showSelector if one was provided
-    console.log('you are in second page');
-    $('.button2').on('click', function() {
-      $('.container').hide();
-      $('.second-view').show();
-      let template = Handlebars.compile($('.video-view-template').text());
-      $('#second-view').append(template());
+    console.log('you are in secondPage');
+    $('.second-view').show();
+    app.allVideos.map(video => $('#second-view').append(video.toHtml()));
+    console.log(app.allVideos[0]);
+    app.allVideos = [];
+    console.log(app.allVideos);
+
+    $('.favorite-button').on('click', function () {
+      console.log('button-pressed: ', this.id);
+      app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
+    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 2000);
   };
 
   pageView.thirdPage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
-    // Empty out the emptySelector if one was provided
-    //$('ADD ID/CLASS').empty();
-    // Show the showSelector if one was provided
-    console.log('you are in third page');
-    $('.button3').on('click', function() {
-      $('.container').hide();
-      $('.third-view').show();
-      let template = Handlebars.compile($('.video-view-template').text());
-      $('#third-view').append(template());
+    console.log('you are in thirdPage');
+    $('.third-view').show();
+    app.allVideos.map(video => $('#third-view').append(video.toHtml()));
+    console.log(app.allVideos[0]);
+    app.allVideos = [];
+    console.log(app.allVideos);
+
+    $('.favorite-button').on('click', function () {
+      console.log('button-pressed: ', this.id);
+      app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
+    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 2000);
   };
 
   pageView.initFavoritePage = () => {
