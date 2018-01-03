@@ -1,5 +1,5 @@
 /* hamburger menu */
-
+/* 
 .wrapper {
   margin: auto;
   display: inline-block;
@@ -61,35 +61,42 @@ ul {
 }
 .checked .box:last-child {
   transform: translateY(5px);
-}
+} */
 
 button {
-  padding: 5%;
-  margin: 5%;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 2vw;
+  border-radius: 3%;
+  display: block;
+  width: 50%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .button1 {
-  background-color: lightsalmon;
+  background-color: black;
+  margin: .5% auto;
 }
 
 .button2 {
-  background-color: mediumorchid;
+  background-color: black;
+  margin: .5% auto;
 }
 
 .button3 {
-  background-color: lightseagreen;
+  background-color: black;
+  margin: .5% auto;
 }
-
-@media screen and (min-width: 480px) {
 
 /* desktop nav */
 
 .topnav {
   overflow: hidden;
-  background-color: navajowhite;
+  background: linear-gradient(to bottom right, cadetblue, lightcyan);
   position: relative;
   background-position: center;
   top: 0%;
@@ -110,7 +117,32 @@ button {
 }
 
 .topnav a:hover {
-  background-color: lightsalmon;
+  background-color: lightcyan;
+  opacity: .;
   color: black;
 }
+
+/* end desktop nav, move to @media at some point */
+
+@media screen and (min-width: 600px) {
+
+/* desktop nav */
+
+.button1 {
+  background: linear-gradient(to bottom right, crimson, lightsalmon);
+  margin: 3% auto;
+  padding: 5%;
+}
+
+.button2 {
+  background: linear-gradient(to bottom left,mediumorchid, lightskyblue);
+  margin: 3% auto;
+  padding: 5%;
+}
+
+.button3 {
+  background: linear-gradient(to bottom right, lightseagreen, lightblue);
+  margin: 3% auto;
+  padding: 5%;
+
 }
