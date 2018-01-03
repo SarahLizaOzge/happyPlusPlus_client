@@ -25,10 +25,6 @@ var app = app || {};
     console.log('you are in firstPage');
     $('.first-view').show();
     app.getVideos();
-    //module.allVideos.map(video=> $('#first-view').append(video.toHtml()));
-    // let template = Handlebars.compile($('.video-view-template').text());
-    // $('#first-view').append(template(app.allVideos));
-
     $('.button1').on('click', function() {
       $('.container').hide();
     });
@@ -64,7 +60,15 @@ var app = app || {};
     });
   };
 
-  pageView.signUpPage = () => {
+  pageView.initFavoritePage = () => {
+    // Hide the hideSelector if one was provided
+    $('.container').hide();
+    // Show the showSelector if one was provided
+    console.log('This is the list of favorite videos');
+    $('.favorite-view').show();
+  };
+
+  pageView.initSignUpPage = () => {
     $('.container').hide();
     $('.user-view').show();
     $('#user-form').show();
