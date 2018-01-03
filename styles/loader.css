@@ -27,6 +27,8 @@
   display:block
 }
 
+/* Loader for first page */
+
 .loader-curtain:after,.loader-curtain:before{
   position:fixed;
   width:100%;
@@ -45,6 +47,81 @@
 }
 
 .loader-curtain:after{
+  color:#fff;
+  height:0;
+  animation:curtain 1s linear infinite alternate both
+}
+
+/* Loader for second page */
+
+.loader-curtain2:after,.loader-curtain2:before{
+  position:fixed;
+  width:100%;
+  top:50%;
+  margin-top:-35px;
+  font-size:30px;
+  text-align:center;
+  font-family: 'Cutive Mono', monospace;
+  overflow:hidden;
+  line-height:1.2;
+  content:"With the new day comes new strength and new thoughts. —Eleanor Roosevelt"
+}
+
+.loader-curtain2:before{
+  color:rgb(238, 238, 238);
+}
+
+.loader-curtain2:after{
+  color:#fff;
+  height:0;
+  animation:curtain 1s linear infinite alternate both
+}
+
+/* Loader for third page */
+
+.loader-curtain2:after,.loader-curtain2:before{
+  position:fixed;
+  width:100%;
+  top:50%;
+  margin-top:-35px;
+  font-size:30px;
+  text-align:center;
+  font-family: 'Cutive Mono', monospace;
+  overflow:hidden;
+  line-height:1.2;
+  content:"The most difficult thing is the decision to act, the rest is merely tenacity. —Amelia Earhart"
+}
+
+.loader-curtain2:before{
+  color:rgb(238, 238, 238);
+}
+
+.loader-curtain2:after{
+  color:#fff;
+  height:0;
+  animation:curtain 1s linear infinite alternate both
+}
+
+/* Loader for fourth page */
+
+.loader-curtain2:after,.loader-curtain2:before{
+  position:fixed;
+  width:100%;
+  top:50%;
+  margin-top:-35px;
+  font-size:30px;
+  text-align:center;
+  font-family: 'Cutive Mono', monospace;
+  overflow:hidden;
+  line-height:1.2;
+  content:"add quote"
+}
+
+.loader-curtain2:before{
+  color:rgb(238, 238, 238);
+}
+
+.loader-curtain2:after{
   color:#fff;
   height:0;
   animation:curtain 1s linear infinite alternate both
