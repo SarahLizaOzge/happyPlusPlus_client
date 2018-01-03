@@ -49,6 +49,17 @@ img {
   text-shadow: 1px 1px 3px #202020;
 }
 
+.caption4 {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 3px #202020;
+}
+
 .button1 {
   background-repeat: no-repeat;
   background-position: center;
@@ -96,12 +107,23 @@ img {
 
 /* end desktop nav, move to @media at some point */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1200px) {
 
   body {
     margin: 0;
     padding: 0;
     height: 100%;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  img {
+    min-width: 600px;
+    max-height: 400px;
+    margin: 1% 0 1% 0;
   }
 
   .caption1 {
@@ -137,6 +159,17 @@ img {
     text-shadow: 1px 1px 3px #202020;
   }
 
+  .caption4 {
+    position: absolute;
+    bottom: -60%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px #202020;
+  }
+
   .largefont {
     font-size: 5vw;
   }
@@ -144,4 +177,14 @@ img {
   .smallfont {
     font-size: 2.5vw;
   }
+
+  .right {
+    float: right;
+  }
+
+  .left {
+    float: left;
+  }
 }
+
+@media screen and (min-width: 500px) {
