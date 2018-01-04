@@ -56,10 +56,3 @@ color: gold;
 
 }
 
-#video-checkbox {
-  visibility: hidden;
-}
-#video-checkbox:checked {
-color: gold;
-
-}
