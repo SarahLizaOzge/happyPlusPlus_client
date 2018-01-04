@@ -103,7 +103,7 @@ p {
     margin-left: calc((100% / 3) / 3);
     font-size: 2vw;
     text-align: center;
-    background-color: aqua;
+    
     color:red;
   }
 
@@ -114,7 +114,7 @@ p {
     border: 8px solid #303030;
     width: 200px;
     height: 200px;
-    background-image: url(img/liza.png);
+    background-image: url('liza.png');
   }
 
   .biopic, #biopicOzge {
@@ -124,7 +124,7 @@ p {
     border: 8px solid #303030;
     width: 200px;
     height: 200px;
-    background-image: url(img/ozge.png);
+    background-image: url(ozge.png);
   }
 
   .biopic, #biopicSarah {
@@ -134,7 +134,7 @@ p {
     border: 8px solid #303030;
     width: 200px;
     height: 200px;
-    background-image: url(img/sarah.png);
+    background-image: url(sarah.png);
     font-size: 1.5vw;
   }
 
