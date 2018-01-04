@@ -14,8 +14,9 @@ html, body {
 /* body {
     position: relative;
     width: 100%;
+    background-image: url("fit.jpg");
 
-} */
+}  */
 header, main, sidebar, footer, article, section, div, p {
     position: relative;
     margin: 0;
@@ -28,6 +29,7 @@ main {
   display: block;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 p {
     position: relative;

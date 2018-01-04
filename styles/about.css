@@ -1,67 +1,44 @@
-@media screen and (min-width: 650px) {
-
-
-.profile-info {
-    display: inline-block;
-    width: calc(100% / 3);
-    margin: 4% 0;
-    margin-left: calc((100% / 3) / 3);
-    font-size: 2vw;
-    text-align: center;
-    
-    color:red;
+div {
+  position: relative;
   }
 
-  .biopic, #biopicLiza {
-    border-radius: 108px;
-    border: 8px solid #303030;
-    width: 200px;
-    height: 200px;
-    background-image: url('styles/img/liza.png');
-  }
+.profile-image-container-liza {
+  width: 100%;
+  margin: 100%;
+  max-width: 900px;
+  display: block;
+  background-color: aqua;
+  background-image: url(grit2.jpg);
+}
 
-  .biopic, #biopicOzge {
-    border-radius: 108px;
-    border: 8px solid #303030;
-    width: 200px;
-    height: 200px;
-    background-image: url(ozge.png);
-  }
+.profile-image-container {
+  position: inherit;
+   width: 100%;
+   margin: 0 auto;
+   max-width: 900px;
+   display: block;
+   width:100%;
+   margin: 0 auto;
+ }
 
-  .biopic, #biopicSarah {
-    border-radius: 108px;
-    border: 8px solid #303030;
-    width: 200px;
-    height: 200px;
-    background-image: url(sarah.png);
-    font-size: 1.5vw;
-  }
 
-  .biopic span {
-    border-radius: 108px;
-    width: 200px;
-    height: 200px;
-    display: block;
-    text-indent: -5000px;
-    line-height: 200px;
-    font-family: 'Cutive Mono', monospace;
-    font-size: 2.5em;
-    font-weight: bold;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.685);
-    color: #7e7e7e;
-    text-align: center;
-    transition: all 0.5s;
-    overflow: hidden;
-  }
+@media screen and (min-width: 600px) {
 
-  .biopic span:hover {
-    background: rgba(44, 44, 44, 0.5);
-    text-indent: 0px;
-    overflow: hidden;
-  }
+ .profile-image-container {
+   width: 47%;
+   margin: .5% auto;
+   float: right;
+ }
 
-  .about-info {
-    color:blue;
-  }
+ .profile-image-container-liza {
+  width: 47%;
+  margin: .5% auto;
+  float: left;
+}
+  /* .profileimage {
+    width: 300px;
+    max-height: 100px;
+    margin: 1% 1% 1% 1%;
+  } */
 }
 
