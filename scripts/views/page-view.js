@@ -80,8 +80,12 @@ var app = app || {};
     $('.favorite-view').show();
     $('#favorite-view').empty();
     let template = Handlebars.compile($('#video-favorite-template').text());
-    console.log(ctx.favoriteVideos);
+    console.log('favorite videos', ctx.favoriteVideos);
     ctx.favoriteVideos.map(ele => $('#favorite-view').append(template(ele)));
+    $('.delete').on('click', function() {
+      console.log(localStorage.username, this.id);
+      app.deleteFavorite(localStorage.username, this.id);
+    });
   };
 
   pageView.initSignUpPage = () => {

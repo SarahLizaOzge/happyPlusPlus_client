@@ -131,6 +131,24 @@ var app = app || {};
       .then(() => page('/'))
       .catch(errorCallback);
   };
+
+  module.deleteFavorite = (username, video_url) =>{
+    $.ajax({
+      url: `${__API_URL__}/api/v1/deleteFavorite`,
+      method: 'DELETE',
+      data:{
+        username:username,
+        video_url: `${video_url}`,
+       
+      },
+    })
+      .then(() => page(`/users/favorite`))
+      .catch(errorCallback);
+  };
+
+
+
+
   module.addToFavorites = (username, video) =>{
     $.ajax({
       url:`${__API_URL__}/api/v1/addToFavorites`,
