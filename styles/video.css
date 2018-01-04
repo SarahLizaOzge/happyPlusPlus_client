@@ -1,0 +1,44 @@
+/* video styles */
+.video-item {
+  background-color: #00ffff78;
+}
+.video-container {
+  background-color: yellow;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+.video-container iframe {
+ display: block;
+ position: relative;
+ margin: 0 auto;
+}
+.video-container iframe {
+ display: block;
+ position: relative;
+ margin: 0 auto;
+ width: 100%;
+ height: 500px;
+}
+
+.video-container button {
+  display: none;
+}
+.label-favorite {
+  display: block;
+  float: right;
+ }
+.label-favorite div {
+  background-color: pink;
+  display: block;
+  margin: 0 auto;
+ position:absolute;
+ color: #ffc107c7;
+  font-size: 5vw;
+
+}
+.label-favorite div:hover {
+color: #FF9800;
+font-size: 5vw;
+
+}

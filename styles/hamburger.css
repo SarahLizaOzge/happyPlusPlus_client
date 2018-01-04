@@ -1,0 +1,72 @@
+
+   .topnav ul li {
+    display: inline;
+}
+.hamburger {
+    
+    float:right;
+    margin-right: 2%;
+}
+
+
+
+/*modules*/
+ 
+
+    .hamburger {
+        float: right;
+        width: 35px;
+        height: 6px;
+        border-top: 5px solid yellow;
+        border-bottom: 15px double yellow;
+        margin: 3% 3%;
+    }
+
+    #show-menu {
+        display: none;
+    }
+
+
+    .tab {
+        visibility: collapse;
+       
+    }
+    
+ 
+    .topnav .show-menu {
+        display:block;
+       
+    } 
+    
+    #show-menu:checked ~ * .tab {
+        
+        visibility: visible;
+        display: block;
+        text-align: center;
+    }
+#show-menu:checked ~ .menu {
+    width: 100%
+    position: relative; 
+    background-color: aqua;
+}
+    /* #show-menu:checked ~* li  {
+    margin-top: 5px;
+    position: absolute; 
+    height: 40px;
+    top: 10%;
+    width: 100%;         
+     background-color: pink;      
+    }
+  */
+
+@media screen and (min-width: 1200px) {
+    .hamburger{
+        display: none;
+    }
+
+    .tab {
+        visibility: visible;
+       
+    }
+
+}
