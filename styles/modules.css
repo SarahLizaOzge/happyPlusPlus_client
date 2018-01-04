@@ -15,7 +15,8 @@
   overflow: hidden;
   background: linear-gradient(to bottom right, black, rgb(80, 77, 77));
   opacity: .7;
-  position: relative;
+  position: fixed;
+  z-index: 100;
   background-position: center;
   top: 0%;
   width: 100%;
