@@ -112,6 +112,7 @@ var app = app || {};
       data: userdata,
       success: function(){
         $('#user-login').show();
+        $('#login').show();
       }
     })
       .then(() => page('/'))

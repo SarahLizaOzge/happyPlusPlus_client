@@ -103,6 +103,14 @@ var app = app || {};
     $('#user-form').on('submit', module.pageView.submit);
   };
 
+  pageView.initAboutPage = () => {
+    // Hide the hideSelector if one was provided
+    $('.container').hide();
+    // Show the showSelector if one was provided
+    console.log('about view');
+    $('.about-view').show();
+  };
+
   pageView.submit = event => {
     event.preventDefault();
     let user = {

@@ -24,7 +24,6 @@ div {
     position:absolute;
     display: block;
 
-      
 }
  img {
     max-height: 600px;
@@ -92,5 +91,83 @@ p {
  color: white;
   font-family: 'Roboto', sans-serif;
   text-shadow: 1px 1px 3px #202020;
+}
+
+@media screen and (min-width: 650px) {
+
+/* about view */
+.profile-info {
+    display: inline-block;
+    width: calc(100% / 3);
+    margin: 4% 0;
+    margin-left: calc((100% / 3) / 3);
+    font-size: 2vw;
+    text-align: center;
+    background-color: aqua;
+    color:red;
+  }
+
+  .biopic, #biopicLiza {
+    /* -webkit-border-radius: 108px;
+    -moz-border-radius: 108px; */
+    border-radius: 108px;
+    border: 8px solid #303030;
+    width: 200px;
+    height: 200px;
+    background-image: url(img/liza.png);
+  }
+
+  .biopic, #biopicOzge {
+    /* -webkit-border-radius: 108px;
+    -moz-border-radius: 108px; */
+    border-radius: 108px;
+    border: 8px solid #303030;
+    width: 200px;
+    height: 200px;
+    background-image: url(img/ozge.png);
+  }
+
+  .biopic, #biopicSarah {
+    /* -webkit-border-radius: 108px;
+    -moz-border-radius: 108px; */
+    border-radius: 108px;
+    border: 8px solid #303030;
+    width: 200px;
+    height: 200px;
+    background-image: url(img/sarah.png);
+    font-size: 1.5vw;
+  }
+
+  .biopic span {
+    /* -webkit-border-radius: 108px;
+    -moz-border-radius: 108px; */
+    border-radius: 108px;
+    width: 200px;
+    height: 200px;
+    display: block;
+    text-indent: -5000px;
+    line-height: 200px;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.685);
+    color: #7e7e7e;
+    text-align: center;
+    transition: all 0.5s;
+    /* -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s; */
+    /* -o-transition: all 0.5s; */
+    overflow: hidden;
+  }
+
+  .biopic span:hover {
+    background: rgba(44, 44, 44, 0.5);
+    text-indent: 0px;
+    overflow: hidden;
+  }
+
+  .about-info {
+    color:blue;
+  }
 }
 

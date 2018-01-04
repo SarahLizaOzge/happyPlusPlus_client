@@ -12,4 +12,5 @@ page('/users/login', (ctx) => app.pageView.initLoginPage(ctx));
 page('/users/update', (ctx, next) => app.User.getUserInfo(ctx, next), ctx => app.pageView.initUpdateUser(ctx));
 page('/users/delete', (ctx, next) => app.User.getUserInfo(ctx, next), ctx => app.pageView.initDeleteUser(ctx));
 page('/users/favorite', (ctx, next) => app.User.getUserInfo(ctx, next), ctx => app.pageView.initFavoritePage(ctx));
+page('/about', () => app.pageView.initAboutPage());
 page();
