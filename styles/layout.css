@@ -1,192 +1,95 @@
-button {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 2vw;
-  border-radius: 3%;
-  display: block;
-  width: 20%;
-  background: linear-gradient(to bottom left,mediumorchid, lightskyblue);
-  margin: 0 auto;
+div {
+    position: relative;
+    }
+
+#image-container div {
+   position: inherit;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+
+}
+.left {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.right {
+    display: block;
+    width:100%;
+    margin: 0 auto;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  margin: .5% auto;
-  display: block;
-}
+#image-container p {
+    position:absolute;
+    display: block;
 
-.caption1 {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate( -50%, -50% );
-  text-align: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 1px 1px 3px #202020;
 }
-
-.caption2 {
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translate( -50%, -50% );
-  text-align: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 1px 1px 3px #202020;
-}
-
-.caption3 {
-  position: absolute;
-  bottom: -20%;
-  left: 50%;
-  transform: translate( -50%, -50% );
-  text-align: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 1px 1px 3px #202020;
-}
-
-.caption4 {
-  position: absolute;
-  bottom: -40%;
-  left: 50%;
-  transform: translate( -50%, -50% );
-  text-align: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 1px 1px 3px #202020;
-}
-
-.button1 {
-  background-repeat: no-repeat;
-  background-position: center;
-  /* margin: .1% auto; */
-}
-
-/* desktop nav */
-
-.topnav {
-  overflow: hidden;
-  background: linear-gradient(to bottom right, black, rgb(80, 77, 77));
-  opacity: .7;
-  position: relative;
-  background-position: center;
-  top: 0%;
-  width: 100%;
-  right: .1%;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-}
-
-.topnav a {
-  display: inline;
-  color: white;
-  text-align: left;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 2vw;
-  font-family: 'Roboto', sans-serif;
-}
-
-.topnav a:hover {
-  background-color: rgb(80, 77, 77);
-  opacity: .7;
-  color: white;
-}
+ img {
+    max-height: 600px;
+    max-width: 900px;
+    margin: 1% 1% 1% 1%;
+  }
 
 .largefont {
-  font-size: 5vw;
+font-size: 5vw;
+ margin: 0px auto;
 }
 
 .smallfont {
-  font-size: 2.5vw;
-}
+    font-size: 2.5vw;
+    margin: 5vw auto;
 
-/* end desktop nav, move to @media at some point */
+}
 
 @media screen and (min-width: 1200px) {
-
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
   img {
-    min-width: 600px;
+    width: 600px;
     max-height: 400px;
-    margin: 1% 0 1% 0;
+    margin: 1% 1% 1% 1%;
   }
 
-  .caption1 {
-    position: absolute;
-    top: 35%;
-    left: 28%;
-    transform: translate( -50%, -50% );
-    text-align: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px 3px #202020;
+ main {
+    width: 100%;
   }
+ .main-view {
+   position: relative;
+ }
+  #image-container {
+   width: 47%;
+   margin: .5% auto;
+ }
 
-  .caption2 {
-    position: absolute;
-    top: 45%;
-    left: 75%;
-    transform: translate( -50%, -50% );
-    text-align: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px 3px #202020;
-  }
-
-  .caption3 {
-    position: absolute;
-    top: 100%;
-    left: 28%;
-    transform: translate( -50%, -50% );
-    text-align: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px 3px #202020;
-  }
-
-  .caption4 {
-    position: absolute;
-    top: 100%;
-    left: 75%;
-    transform: translate( -50%, -50% );
-    text-align: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px 3px #202020;
-  }
-
-  .largefont {
-    font-size: 5vw;
-  }
-
-  .smallfont {
-    font-size: 2.5vw;
-  }
-
-  .right {
-    float: right;
-  }
-
-  .left {
+ .left {
     float: left;
-  }
+}
+ .right {
+     float: right;
+   }
+
+#image-container p {
+    position:absolute;
+    display: block;
+
 }
 
-@media screen and (min-width: 500px) {
+.largefont {
+font-size: 48px;
+ margin: 0px auto;
+}
+
+.smallfont {
+    font-size: 24px;
+    margin: 70px auto;
 
 }
+}
+
+/*TEXT STYLES*/
+
+p {
+ color: white;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 3px #202020;
+}
+
