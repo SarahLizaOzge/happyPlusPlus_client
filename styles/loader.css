@@ -15,6 +15,7 @@
   display:none;
 }
 
+/* Loader for first page */
 .loader.is-active {
   background-color:rgb(0,0,0);
   width:100%;
@@ -26,8 +27,6 @@
 .loader.is-active:after,.loader.is-active:before{
   display:block
 }
-
-/* Loader for first page */
 
 .loader-curtain:after,.loader-curtain:before{
   position:fixed;
@@ -53,6 +52,17 @@
 }
 
 /* Loader for second page */
+.loader.is-active2 {
+  background-color:rgb(0,0,0);
+  width:100%;
+  height:100%;
+  left:0;
+  top:0
+}
+
+.loader.is-active2:after,.loader.is-active2:before{
+  display:block
+}
 
 .loader-curtain2:after,.loader-curtain2:before{
   position:fixed;
@@ -64,7 +74,7 @@
   font-family: 'Cutive Mono', monospace;
   overflow:hidden;
   line-height:1.2;
-  content:"With the new day comes new strength and new thoughts. —Eleanor Roosevelt"
+  content:"How wonderful it is that nobody need wait a single moment before starting to improve the world. —Anne Frank"
 }
 
 .loader-curtain2:before{
@@ -78,8 +88,19 @@
 }
 
 /* Loader for third page */
+.loader.is-active3 {
+  background-color:rgb(0,0,0);
+  width:100%;
+  height:100%;
+  left:0;
+  top:0
+}
 
-.loader-curtain3:after,.loader-curtain2:before{
+.loader.is-active3:after,.loader.is-active3:before{
+  display:block
+}
+
+.loader-curtain3:after,.loader-curtain3:before{
   position:fixed;
   width:100%;
   top:50%;
@@ -103,8 +124,19 @@
 }
 
 /* Loader for fourth page */
+.loader.is-active4 {
+  background-color:rgb(0,0,0);
+  width:100%;
+  height:100%;
+  left:0;
+  top:0
+}
 
-.loader-curtain4:after,.loader-curtain2:before{
+.loader.is-active4:after,.loader.is-active4:before{
+  display:block
+}
+
+.loader-curtain4:after,.loader-curtain4:before{
   position:fixed;
   width:100%;
   top:50%;
@@ -114,7 +146,7 @@
   font-family: 'Cutive Mono', monospace;
   overflow:hidden;
   line-height:1.2;
-  content:"add quote"
+  content:"With the new day comes new strength and new thoughts. —Eleanor Roosevelt"
 }
 
 .loader-curtain4:before{
@@ -126,19 +158,3 @@
   height:0;
   animation:curtain 1s linear infinite alternate both
 }
-
-/* what is all of this */
-/* .loader-curtain[data-curtain-text]:not([data-curtain-text=""]):after,.loader-curtain[data-curtain-text]:not([data-curtain-text=""]):before{content:attr(data-curtain-text)}
-
-.loader-curtain[data-brazilian]:before{color:#f1c40f}.loader-curtain[data-brazilian]:after{color:#2ecc71}
-
-.loader-curtain[data-colorful]:before{animation:maskColorful 2s linear infinite alternate both}
-
-.loader-curtain[data-colorful]:after{animation:curtain 1s linear infinite alternate both,maskColorful-front 2s 1s linear infinite alternate both;color:#000}
-
-@keyframes maskColorful{0%{color:#3498db}49.5%{color:#3498db}50.5%{color:#e74c3c}to{color:#e74c3c}}
-
-@keyframes maskColorful-front{0%{color:#2ecc71}49.5%{color:#2ecc71}50.5%{color:#f1c40f}to{color:#f1c40f}} */
-
-/* animation
-@keyframes curtain{0%{height:0}to{height:84px}} */

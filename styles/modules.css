@@ -9,6 +9,8 @@
 #users-favorite {
   display: none;
 }
+
+/* desktop nav */
 .topnav {
   overflow: hidden;
   background: linear-gradient(to bottom right, black, rgb(80, 77, 77));
