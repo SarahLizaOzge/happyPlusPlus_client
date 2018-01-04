@@ -26,7 +26,7 @@
   display: none;
 }
 .label-favorite {
-  background-image: url("white-heart.png")
+  background-image: url("white-heart.png");
   position: relative;
   margin: 1% 5% 5% 5%;
   display: block;
@@ -57,9 +57,7 @@ color: gold;
 
 }
 
-.favorite-button{
-  display:none;
-}
+
 
 
 
