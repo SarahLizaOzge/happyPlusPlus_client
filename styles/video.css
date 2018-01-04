@@ -56,3 +56,9 @@ color: gold;
 
 }
 
+/* .label-favorite{
+  display:none;
+} */
+.favorite-button{
+  display:none;
+}
