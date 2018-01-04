@@ -1,18 +1,21 @@
-/* desktop nav */
+/* mobile nav */
 
  .topnav {
   overflow: hidden;
   background: linear-gradient(to bottom right, black, rgb(80, 77, 77));
   opacity: .7;
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   background-position: center;
   top: 0%;
-  width: 100%;
-  right: .1%;
+  width: 90%;
+  left: .1%;
   padding-top: 2vw;
   padding-bottom: 2vw;
 }
+ .topnav li {
+        display: inline;
+    }
 
 .topnav a {
   display: inline;
@@ -29,24 +32,17 @@
   opacity: .7;
   color: white;
 }
-
-/*nav setup*/
-
-  /* .topnav nav {
-      width: 100%;
-      z-index:1;
-      display: inline;
-    } */
-    .topnav li {
-        display: inline;
-    }
-
 .hamburger {
     position: absolute;
     right: 0px;
     top: 0px;
     margin-right: 2%;
-    z-index: 10;
+    width: 35px;
+    height: 6px;
+    border-top: 5px solid white;
+    border-bottom: 15px double white;
+    margin: 0% 1%;
+    z-index: 100;
 }
 
     #show-menu {
@@ -55,21 +51,8 @@
 
     .tab {
         visibility: collapse;
-       
     }
 
-
-/*modules*/
- 
-
-    .hamburger {
-        width: 35px;
-        height: 6px;
-        border-top: 5px solid white;
-        border-bottom: 15px double white;
-        margin: 1% 1%;
-    }
-  
 /*      #show-menu:checked {
          position: fixed;
          z-index: 9;
