@@ -75,9 +75,11 @@ var app = app || {};
         console.log('LOGGED IN');
         localStorage.loggedin = true;
         localStorage.username = username;
+        $('#login').hide();
         $('#users-update').show();
         $('#users-delete').show();
         $('#users-favorite').show();
+        $('#user-login').hide();
       },
       error: function(){
         localStorage.loggedin = false;
@@ -108,6 +110,9 @@ var app = app || {};
       url: `${__API_URL__}/api/v1/users/${username}`,
       method: 'DELETE',
       data: userdata,
+      success: function(){
+        $('#user-login').show();
+      }
     })
       .then(() => page('/'))
       .catch(errorCallback);
