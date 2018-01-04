@@ -19,6 +19,7 @@ var app = app || {};
   pageView.firstPage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
+    $('#first-view').empty();
     console.log('you are in firstPage');
     $('.first-view').show();
     app.allVideos.map(video => $('#first-view').append(video.toHtml()));
@@ -30,12 +31,13 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 3000);
+    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 4000);
   };
 
   pageView.secondPage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
+    $('#second-view').empty();
     console.log('you are in secondPage');
     $('.second-view').show();
     app.allVideos.map(video => $('#second-view').append(video.toHtml()));
@@ -47,12 +49,13 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active2').fadeOut('slow')); }, 3000);
+    setTimeout(() => { ($('.is-active2').fadeOut('slow')); }, 6000);
   };
 
   pageView.thirdPage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
+    $('#third-view').empty();
     console.log('you are in thirdPage');
     $('.third-view').show();
     app.allVideos.map(video => $('#third-view').append(video.toHtml()));
@@ -64,12 +67,13 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active3').fadeOut('slow')); }, 3000);
+    setTimeout(() => { ($('.is-active3').fadeOut('slow')); }, 4000);
   };
 
   pageView.fourthPage = () => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
+    $('#fourth-view').empty();
     console.log('you are in fourthPage');
     $('.fourth-view').show();
     app.allVideos.map(video => $('#fourth-view').append(video.toHtml()));
@@ -81,7 +85,7 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active4').fadeOut('slow')); }, 3000);
+    setTimeout(() => { ($('.is-active4').fadeOut('slow')); }, 4000);
   };
 
   pageView.initFavoritePage = () => {
