@@ -23,10 +23,6 @@ var app = app || {};
     console.log('you are in firstPage');
     $('.first-view').show();
     app.allVideos.map(video => $('#first-view').append(video.toHtml()));
-    console.log(app.allVideos[0]);
-    app.allVideos = [];
-    console.log(app.allVideos);
-
     $('.favorite-button').on('click', function(){
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
@@ -41,10 +37,6 @@ var app = app || {};
     console.log('you are in secondPage');
     $('.second-view').show();
     app.allVideos.map(video => $('#second-view').append(video.toHtml()));
-    console.log(app.allVideos[0]);
-    app.allVideos = [];
-    console.log(app.allVideos);
-
     $('.favorite-button').on('click', function () {
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
@@ -59,10 +51,6 @@ var app = app || {};
     console.log('you are in thirdPage');
     $('.third-view').show();
     app.allVideos.map(video => $('#third-view').append(video.toHtml()));
-    console.log(app.allVideos[0]);
-    app.allVideos = [];
-    console.log(app.allVideos);
-
     $('.favorite-button').on('click', function () {
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
@@ -77,10 +65,6 @@ var app = app || {};
     console.log('you are in fourthPage');
     $('.fourth-view').show();
     app.allVideos.map(video => $('#fourth-view').append(video.toHtml()));
-    console.log(app.allVideos[0]);
-    app.allVideos = [];
-    console.log(app.allVideos);
-
     $('.favorite-button').on('click', function () {
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
@@ -88,12 +72,16 @@ var app = app || {};
     setTimeout(() => { ($('.is-active4').fadeOut('slow')); }, 4000);
   };
 
-  pageView.initFavoritePage = () => {
+  pageView.initFavoritePage = ctx => {
     // Hide the hideSelector if one was provided
     $('.container').hide();
     // Show the showSelector if one was provided
     console.log('This is the list of favorite videos');
     $('.favorite-view').show();
+    $('#favorite-view').empty();
+    let template = Handlebars.compile($('#video-favorite-template').text());
+    console.log(ctx.favoriteVideos);
+    ctx.favoriteVideos.map(ele => $('#favorite-view').append(template(ele)));
   };
 
   pageView.initSignUpPage = () => {
@@ -103,7 +91,16 @@ var app = app || {};
     $('#user-form').on('submit', module.pageView.submit);
   };
 
+  pageView.initAboutPage = () => {
+    // Hide the hideSelector if one was provided
+    $('.container').hide();
+    // Show the showSelector if one was provided
+    console.log('about view');
+    $('.about-view').show();
+  };
+
   pageView.submit = event => {
+    console.log(event.target.username);
     event.preventDefault();
     let user = {
       username: event.target.username.value,
