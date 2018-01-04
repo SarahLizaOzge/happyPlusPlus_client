@@ -4,12 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Happy++</title>
     <link rel="stylesheet" href="styles/reset.css">
-    <!-- <link rel="stylesheet" href="styles/icons.css"> -->
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/loader.css">
     <link rel="stylesheet" href="styles/base.css">
     <!-- <link rel="stylesheet" href="styles/layout.css"> -->
     <link rel="stylesheet" href="styles/layout2.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/hamburger.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
   <!-- Error Handlebars Template -->
@@ -21,13 +23,21 @@
   <script type="text/x-handlebars-template" id="video-view-template">
     <li class="video-item" data-video-id={{id.videoId}}>
       <div class="video-container">
-         <iframe id="video-{{id.videoId}}" width= "560" height= "315" src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
+         <iframe id="video-{{id.videoId}}"  src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
         </iframe>
-        <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
+        <div class="video-text">
+          <!-- <p id="favorite-text">click the heart to add to your favorites</p> -->
+          <input type="checkbox" id="video-checkbox {{index}}">
+          <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
+          <label class="label-favorite" for="{{index}}">
+            <div class="entypo-heart-empty"></div>
+            <div class="entypo-heart"></div>
+    
+          </label>
+        </div>
+        
       </div>
-          <h1>{{snippet.title}}</h1>
-          <p>{{snippet.description}}</p>
-    </li>
+        </li>
   </script>
   <script type="text/x-handlebars-template" id="video-favorite-template">
     <li class="video-item" data-video-id={{index}}>
@@ -41,16 +51,40 @@
   </head>
   <body>
     <!-- Desktop View Nav -->
+
     <header id="home" class="mainheader">
+        <label for="show-menu" id="toggle-menu">
+          <div class="hamburger">
+          </div>
+        </label>
         <nav class="topnav">
+          <input type="checkbox" id="show-menu">
+          <ul class="menu">
+          <li class="tab" data-content="home">
           <a class="active" href='/'>Home</a>
-          <a class="active" href='/about'>About Us</a>
-          <a class="active" href="/user" id="user-login">SignUp</a>
-          <a class="active" href="/users/login" id="login">Login</a>
-          <a class="active" href="/users/update" id="users-update">Update</a>
+
+          </li>
+          <li class="tab" data-content="about-us">
+          <a class="active" href='/'>About Us</a>
+          </li>
+          <li class ="tab" data-content="sign-up">
+          <a class="active" href="/user" id= "user-login">SignUp</a>
+          </li>
+          <li class="tab" data-content="login">
+          <a class="active" href="/users/login" id= "login">Login</a>
+        </li>
+        <li class="tab" data-content="update">
+          <a class="active" href="/users/update" id= "users-update">Update</a>
+          </li>
+          <li class= "tab" data-content="delete">
+
           <a class="active" href="/users/delete" id="users-delete">Delete</a>
+          </li>
+          <li class="tab" data-content="fave">
           <a class="active" href="/users/favorite" id="users-favorite">Favorites</a>
+        </li>
         </nav>
+
       </header>
     <!-- Main -->
     <main>
@@ -65,7 +99,7 @@
         <div id=image-container class="right">
         <a class="button1" href="/first"><img src="mindset.jpg" class="right">
           <div class="caption1">
-              <p class="largefont">YOUR GROWTH MINDSET</p>
+              <p class="largefont">GROWTH MINDSET</p>
               <p class="smallfont">Let's Do This</p>
           </div>
         </a>
