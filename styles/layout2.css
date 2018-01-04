@@ -92,7 +92,7 @@ p {
   font-family: 'Roboto', sans-serif;
   text-shadow: 1px 1px 3px #202020;
 }
-/* 
+
 @media screen and (min-width: 650px) {
 
 
@@ -112,7 +112,7 @@ p {
     border: 8px solid #303030;
     width: 200px;
     height: 200px;
-    background-image: url('liza.png');
+    background-image: url('styles/img/liza.png');
   }
 
   .biopic, #biopicOzge {
@@ -158,5 +158,5 @@ p {
   .about-info {
     color:blue;
   }
-} */
+} 
 
