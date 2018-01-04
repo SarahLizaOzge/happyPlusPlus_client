@@ -25,12 +25,23 @@ var app = app || {};
 
   module.allVideos=[];
 
+  module.getUserVideos = (ctx, callback) => {
+    $.get(`${__API_URL__}/api/v1/favorites/${ctx.user.username}`)
+      .then(results => ctx.favoriteVideos = results)
+      .then(callback)
+      .catch(errorCallback);
+  };
+  
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   // module.rawVideos = $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=motivation+ted+talk&type=video&videoDefinition=high`);
 
   // module.rawVideos.responseJSON.items.map(ele => module.allVideos.push(new Video(ele)));
 
 
   module.getVideos = (callback, query) => {
+    module.allVideos=[];
     $.get(`${__API_URL__}/api/v1/videos/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high`)
       .then(result => result.items.map((ele, index)=> {
         console.log(ele.id.videoId);
