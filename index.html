@@ -25,10 +25,10 @@
       <div class="video-container">
          <iframe id="video-{{id.videoId}}"  src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
         </iframe>
-        <div class="video-text">
+        <div id "favorite-video" class="video-text">
           <!-- <p id="favorite-text">click the heart to add to your favorites</p> -->
           <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
-          <label class="label-favorite" for="{{index}}">
+          <label id="label-favorite-id" class="label-favorite" for="{{index}}">
             <div class="entypo-heart"></div>
             <div class="entypo-heart-empty"></div>
           </label>
@@ -94,7 +94,7 @@
       <section class="main-view container">
       <!-- First Image Link -->
         <div id=image-container class="right">
-        <a class="button1" href="/first"><img src="mindset.jpg" class="right">
+        <a class="button1" href="/first"><img src="mindset.jpg" class="main right">
           <div class="caption1">
               <p class="largefont">GROWTH MINDSET</p>
               <p class="smallfont">Let's Do This</p>
@@ -103,7 +103,7 @@
         </div>
         <!-- Second Image Link -->
         <div id=image-container class="left"><a class="button2" href="/second">
-          <img src="wild.jpg"  class="left">
+          <img src="wild.jpg"  class="main left">
           <div class="caption2">
             <p class="largefont">INTO THE WILD</p>
             <p class="smallfont">Get Inspired</p>
@@ -112,7 +112,7 @@
       </div>
       <!-- Third Image Link -->
       <div id=image-container class="right">
-      <a class="button3" href="/third"><img src="grit2.jpg" class="right">
+      <a class="button3" href="/third"><img src="grit2.jpg" class="main right">
         <div class="caption3">
             <p class="largefont">FIND YOUR GRIT</p>
             <p class="smallfont">Achieve Your Goals</p>
@@ -121,7 +121,7 @@
       </div>
       <!-- Fourth Image Link -->
       <div id=image-container class="left">
-      <a class="button4" href="/fourth"><img src="fit.jpg" class="left">
+      <a class="button4" href="/fourth"><img src="fit.jpg" class="main left">
         <div class="caption4">
             <p class="largefont">I CAN AND I WILL</p>
             <p class="smallfont">Never Give Up</p>
