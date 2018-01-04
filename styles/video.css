@@ -1,9 +1,10 @@
 /* video styles */
 .video-item {
-  background-color: #00ffff78;
+/*   background-color: #00ffff78; */
 }
 .video-container {
-  background-color: yellow;
+  padding: 3px;
+/*   background-color: yellow; */
   display: block;
   position: relative;
   margin: 0 auto;
@@ -25,20 +26,40 @@
   display: none;
 }
 .label-favorite {
+  position: relative;
+  margin: 1% 5% 5% 5%;
   display: block;
   float: right;
  }
-.label-favorite div {
-  background-color: pink;
+/* .label-favorite div {
+  position: absolute;
   display: block;
-  margin: 0 auto;
- position:absolute;
- color: #ffc107c7;
-  font-size: 5vw;
+  font-size: 3vw;
+} */
+.entypo-heart-empty {
+  display:block;
+  position: absolute;
+  visibility: visible;
+  color:white;
+  font-size:3vw;
+}
+.entypo-heart {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  color: white;
+  font-size:3vw;
+}
+
+.entypo-heart-empty:hover {
+color: gold;
 
 }
-.label-favorite div:hover {
-color: #FF9800;
-font-size: 5vw;
+
+#video-checkbox {
+  visibility: hidden;
+}
+#video-checkbox:checked {
+color: gold;
 
 }
