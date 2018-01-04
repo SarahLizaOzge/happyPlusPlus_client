@@ -1,4 +1,11 @@
 /* video styles */
+.entypo-heart {
+  display:none;
+}
+.entypo-heart-empty {
+  display:none;
+}
+
 .video-item {
 /*   background-color: #00ffff78; */
 }
@@ -26,36 +33,27 @@
   display: none;
 }
 .label-favorite {
-  background-image: url("white-heart.png");
+  width: 60px;
+  height: 60px;
+  background-image:url("white-heart.png");
+  background-repeat: no-repeat;
+  background-position: -85px -9px;
   position: relative;
   margin: 1% 5% 5% 5%;
   display: block;
   float: right;
  }
-/* .label-favorite div {
-  position: absolute;
+ .label-favorite:hover {
+  width: 60px;
+  height: 60px;
+  background-image:url("white-heart.png");
+  background-repeat: no-repeat;
+  background-position: -27px -9px;
+  position: relative;
+  margin: 1% 5% 5% 5%;
   display: block;
-  font-size: 3vw;
-} */
-.entypo-heart-empty {
-  display:block;
-  position: absolute;
-  visibility: visible;
-  color:white;
-  font-size:3vw;
-}
-.entypo-heart {
-  display: block;
-  position: absolute;
-  visibility: hidden;
-  color: white;
-  font-size:3vw;
-}
-
-.entypo-heart-empty:hover {
-color: gold;
-
-}
+  float: right;
+ }
 
 
 

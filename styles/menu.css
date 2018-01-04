@@ -44,6 +44,7 @@ z-index: 10;
   opacity: .7;
 }
 
+/*drop down*/
 #show-menu:checked~* .tab{
         visibility: visible;
         display: block;
@@ -54,6 +55,7 @@ z-index: 10;
         text-decoration:none;
         z-index:100;
     }
+    /*add margin to top link*/
     #show-menu:checked~* .home{
         margin-top: 90px;
 }

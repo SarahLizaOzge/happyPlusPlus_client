@@ -91,8 +91,7 @@ var app = app || {};
         $('#users-delete').show();
         $('#users-favorite').show();
         $('#user-login').hide();
-        $('.favorite-button').show();
-      
+
       },
       error: function(){
         localStorage.loggedin = false;

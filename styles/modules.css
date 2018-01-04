@@ -11,10 +11,13 @@
 #users-favorite {
   display: none;
 }
+
 .favorite-button{
   display:none;
 }
-
+/* #label-favorite-id {
+  display: none;
+} */
 
 button {
   text-align: center;
