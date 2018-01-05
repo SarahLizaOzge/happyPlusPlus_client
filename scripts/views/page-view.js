@@ -54,7 +54,7 @@ var app = app || {};
       console.log('checkbox-state: ', this);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 1000);
+    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 4000);
   };
 
   pageView.secondPage = () => {
@@ -69,7 +69,7 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active2').fadeOut('slow')); }, 1000);
+    setTimeout(() => { ($('.is-active2').fadeOut('slow')); }, 4000);
   };
 
   pageView.thirdPage = () => {
@@ -84,7 +84,7 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active3').fadeOut('slow')); }, 1000);
+    setTimeout(() => { ($('.is-active3').fadeOut('slow')); }, 4000);
   };
 
   pageView.fourthPage = () => {
@@ -99,7 +99,7 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active4').fadeOut('slow')); }, 1000);
+    setTimeout(() => { ($('.is-active4').fadeOut('slow')); }, 4000);
   };
 
   pageView.initFavoritePage = ctx => {
