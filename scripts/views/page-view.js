@@ -6,21 +6,27 @@ var app = app || {};
 
   var pageView = {};
 
-  $('.topnav').on('click', function (event) {
-    $('.topnav').show();
 
-    $('.topnav').slideToggle(350);
-
-  });
 
   function resetView() {
     console.log('reset view function fired');
-    // $('.topnav').slideToggle(350);
-    $('.topnav').show();
+    // // $('.topnav').slideToggle(350);
+    // $('.topnav').on('click', function () {
+    //   $('#show-menu').attr('checked', false);
+    //   $('input:checkbox[name=checkbox-menu]').attr('checked', false);
+    // });
+    console.log($(document).width());
+    // if ($(document).width()<1200) {
+    //   $('input:checkbox[name=checkbox-menu]').attr('checked', false);
+    // } else {
+    //   $('input:checkbox[name=checkbox-menu]').attr('checked', true);
+    // }
+    
   }
 
   pageView.initIndexPage = () => {
     console.log('initIndexPage');
+ 
     resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
