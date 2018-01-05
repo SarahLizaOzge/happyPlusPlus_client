@@ -37,6 +37,7 @@ z-index: 10;
   color: white;
   text-align: center;
   text-decoration: none;
+  letter-spacing: 3px;
   font-size: 3vw;
   font-family: 'Roboto', sans-serif;
 }
@@ -105,6 +106,7 @@ background-color: rgb(80, 77, 77);
   display: inline;
   color: white;
   text-align: left;
+  letter-spacing: 5px;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 2vw;
