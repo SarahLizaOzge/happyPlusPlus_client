@@ -138,7 +138,7 @@ var app = app || {};
       data:{
         username:username,
         video_url: `${video_url}`,
-       
+
       },
     })
       .then(() => page(`/users/favorite`))

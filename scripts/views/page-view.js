@@ -6,17 +6,36 @@ var app = app || {};
 
   var pageView = {};
 
+  $('.topnav').on('click', function (event) {
+    $('.topnav').show();
+
+    $('.topnav').slideToggle(350);
+
+  });
+
+  function resetView() {
+    console.log('reset view function fired');
+    // $('.topnav').slideToggle(350);
+    $('.topnav').show();
+  }
+
   pageView.initIndexPage = () => {
     console.log('initIndexPage');
+    resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
     // Empty out the emptySelector if one was provided
     $('#main-view').empty();
     // Show the showSelector if one was provided
     $('.main-view').show();
+    // $('.menu').on('click', function(){
+    //   console.log('menu click', this);
+    //   $('.active').hide();
+    // });
   };
 
   pageView.firstPage = () => {
+    resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
     $('#first-view').empty();
@@ -27,10 +46,11 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 4000);
+    setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 1000);
   };
 
   pageView.secondPage = () => {
+    resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
     $('#second-view').empty();
@@ -41,10 +61,11 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active2').fadeOut('slow')); }, 6000);
+    setTimeout(() => { ($('.is-active2').fadeOut('slow')); }, 1000);
   };
 
   pageView.thirdPage = () => {
+    resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
     $('#third-view').empty();
@@ -55,10 +76,11 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active3').fadeOut('slow')); }, 4000);
+    setTimeout(() => { ($('.is-active3').fadeOut('slow')); }, 1000);
   };
 
   pageView.fourthPage = () => {
+    resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
     $('#fourth-view').empty();
@@ -69,10 +91,11 @@ var app = app || {};
       console.log('button-pressed: ', this.id);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
-    setTimeout(() => { ($('.is-active4').fadeOut('slow')); }, 4000);
+    setTimeout(() => { ($('.is-active4').fadeOut('slow')); }, 1000);
   };
 
   pageView.initFavoritePage = ctx => {
+    resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
     // Show the showSelector if one was provided
@@ -89,6 +112,7 @@ var app = app || {};
   };
 
   pageView.initSignUpPage = () => {
+    resetView();
     $('.container').hide();
     $('.user-view').show();
     $('#user-form').show();
@@ -96,6 +120,7 @@ var app = app || {};
   };
 
   pageView.initAboutPage = () => {
+    resetView();
     // Hide the hideSelector if one was provided
     $('.container').hide();
     // Show the showSelector if one was provided
