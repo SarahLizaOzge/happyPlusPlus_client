@@ -168,7 +168,7 @@
             <input placeholder="password" name="password" class="password" pattern="[A-Za-z]{6}" type="password" required></br>
             <input placeholder="email" name="email" class="email" type="text" required></br>
             <button type="submit" id="add-user">SignUp</button>
-            <label for="add-user" id="add-user-label"><p>sign up</p></label>
+            <label for="add-user" class="add-user-label"><p>sign up</p></label>
         </form>
       </section>
       <!-- Login Container -->
@@ -178,6 +178,9 @@
               <input placeholder="username" name="username" class="username" type="text" required></br>
               <input placeholder="password" name="password" class="password" type="password" required></br>
               <button type="submit" id="login">Login</button>
+              <label for="login" class="add-user-label">
+                <p>log in</p>
+              </label>
           </form>
       </section>
       <!-- Update Container -->
@@ -189,6 +192,9 @@
             <label>email:</label>
             <input placeholder="email" name="email" class="email" type="text" required></br>
             <button type="submit" id="update-user">Update</button>
+            <label for="update-user" class="add-user-label">
+              <p>update</p>
+            </label>
           </form>
           <p id = "update-message"></p>
       </section>
@@ -201,6 +207,9 @@
           <label>email:</label>
           <input placeholder="email" name="email" class="email" type="text"disabled required></br>
           <button type="submit" id="delete-user">Delete</button>
+          <label for="delete-user" class="add-user-label">
+            <p>sign up</p>
+          </label>
         </form>
     </section>
      <!-- About View Container -->
@@ -212,6 +221,7 @@
         <div class="aboutsarah">
           <div class="overlay">
           <div class="text">
+            <div class="entypo-github"></div>
             <p class="abouttext">Sarah</p>
             <p class="abouttext">blah blah blah</p>
           </div>

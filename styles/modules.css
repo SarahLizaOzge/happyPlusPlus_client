@@ -36,7 +36,17 @@ button {
 #add-user {
   display: none;
 }
-#add-user-label {
+#update-user {
+  display: none;
+}
+#delete-user {
+  display: none;
+}
+#login {
+  display: none;
+}
+
+.add-user-label {
   margin: 1%;
   display: block;
   background-color:#353333ba;
@@ -47,13 +57,13 @@ button {
   padding: 0px;
 
 }
-#add-user-label:hover {
+.add-user-label:hover {
 
   background-color:#797777ba;
 
 
 }
-#add-user-label p {
+.add-user-label p {
   display: block;
   color: white;
   margin-top:0px;
