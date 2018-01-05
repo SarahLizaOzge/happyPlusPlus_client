@@ -1,13 +1,15 @@
-.about-view {
+/* .about-view {
   margin-left: 5%;
   margin-right: 5%;
-}
+} */
 /* .row {
   display: inline;
   text-align: center;
   background-color:pink;
 } */
 div.row {
+  width: 50%;
+  display: block;
   margin: 0 auto;
 }
 
@@ -68,15 +70,11 @@ div.aboutsarah {
 
 @media screen and (min-width: 700px) {
 
-  body{
-    margin: 0 auto;
-    width: 990px;
-}
-
   div.row {
-    max-width: 990px; 
+    width: 100%;
+    display: block;
+    max-width: 990px;
     margin: 0 auto;
-    background-color: blue;
   }
   .aboutliza {
     background-image: url("liza.jpg");
