@@ -62,7 +62,7 @@
  .label-delete {
   width: 60px;
   height: 60px;
-  background-image:url("white-heart.png");
+  background-image:url("delete-x.png");
   background-repeat: no-repeat;
   background-position: -85px -9px;
   position: relative;
@@ -73,7 +73,7 @@
  .label-delete:hover {
   width: 60px;
   height: 60px;
-  background-image:url("white-heart.png");
+  background-image:url("delete-x.png");
   background-repeat: no-repeat;
   background-position: -27px -9px;
   position: relative;

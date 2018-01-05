@@ -83,7 +83,7 @@ var app = app || {};
     console.log('favorite videos', ctx.favoriteVideos);
     ctx.favoriteVideos.map(ele => $('#favorite-view').append(template(ele)));
     $('.delete').on('click', function() {
-      console.log(localStorage.username, this.id);
+      console.log('deleted', `${localStorage.username} and ${this.id}`);
       app.deleteFavorite(localStorage.username, this.id);
     });
   };
