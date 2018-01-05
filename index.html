@@ -25,27 +25,25 @@
       <div class="video-container">
          <iframe id="video-{{id.videoId}}"  src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
         </iframe>
-        <div id "favorite-video" class="video-text">
+        <div class="video-text">
           <!-- <p id="favorite-text">click the heart to add to your favorites</p> -->
           <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
-          <label id="label-favorite-id" class="label-favorite" for="{{index}}">
+          <label class="label-favorite" for="{{index}}">
+            <div class="entypo-heart"></div>
+            <div class="entypo-heart-empty"></div>
           </label>
         </div>
       </div>
         </li>
   </script>
-
   <script type="text/x-handlebars-template" id="video-favorite-template">
     <li class="video-item" data-video-id={{index}}>
       <div class="video-container">
-         <iframe id="video-{{index}}" src={{video_url}} gesture="media" allow="encrypted-media">
+         <iframe id="video-{{index}}" width= "560" height= "315" src={{video_url}} gesture="media" allow="encrypted-media">
         </iframe>
-      <div id "favorite-video" class="video-text">
-      <button type="button" class="delete" id="{{video_url}}">delete favorite</button>
-      <label id="label-delete-id" class="label-delete" for="{{video_url}}">
-      </label>
       </div>
-      </div>
+      <button type="button" class="delete
+      " id="{{video_url}}">delete favorite</button>
     </li>
   </script>
 
@@ -54,34 +52,35 @@
     <!-- Desktop View Nav -->
 
     <header id="home" class="mainheader">
+        <label for="show-menu" id="toggle-menu">
+          <div class="hamburger">
+          </div>
+        </label>
         <nav class="topnav">
-          <label for="show-menu" id="toggle-menu">
-            <div class="hamburger">
-            </div>
-          </label>
-          <input type="checkbox" id="show-menu" name="checkbox-menu"/>
+          <input type="checkbox" id="show-menu">
           <ul class="menu">
-          <li class="tab home" data-content="home">
-          <a class="active" href='/'>Home</a>
+          <li class="tab" data-content="home">
+          <a class="active" href='./'>Home</a>
+
           </li>
           <li class="tab" data-content="about-us">
-          <a class="active" href='/about'>About Us</a>
+          <a class="active" href='./about'>About Us</a>
           </li>
           <li class ="tab" data-content="sign-up">
-          <a class="active" href="/user" id= "user-login">SignUp</a>
+          <a class="active" href="./user" id= "user-login">SignUp</a>
           </li>
           <li class="tab" data-content="login">
-          <a class="active" href="/users/login" id= "login">Login</a>
+          <a class="active" href="./users/login" id= "login">Login</a>
         </li>
         <li class="tab" data-content="update">
-          <a class="active" href="/users/update" id= "users-update">Update</a>
+          <a class="active" href="./users/update" id= "users-update">Update</a>
           </li>
           <li class= "tab" data-content="delete">
 
-          <a class="active" href="/users/delete" id="users-delete">Delete</a>
+          <a class="active" href="./users/delete" id="users-delete">Delete</a>
           </li>
           <li class="tab" data-content="fave">
-          <a class="active" href="/users/favorite" id="users-favorite">Favorites</a>
+          <a class="active" href="./users/favorite" id="users-favorite">Favorites</a>
         </li>
         </nav>
 
@@ -97,7 +96,7 @@
       <section class="main-view container">
       <!-- First Image Link -->
         <div id=image-container class="right">
-        <a class="button1" href="/first"><img src="mindset.jpg" class="main right">
+        <a class="button1" href="./first"><img src="mindset.jpg" class="right">
           <div class="caption1">
               <p class="largefont">GROWTH MINDSET</p>
               <p class="smallfont">Let's Do This</p>
@@ -106,7 +105,7 @@
         </div>
         <!-- Second Image Link -->
         <div id=image-container class="left"><a class="button2" href="/second">
-          <img src="wild.jpg"  class="main left">
+          <img src="wild.jpg"  class="left">
           <div class="caption2">
             <p class="largefont">INTO THE WILD</p>
             <p class="smallfont">Get Inspired</p>
@@ -115,7 +114,7 @@
       </div>
       <!-- Third Image Link -->
       <div id=image-container class="right">
-      <a class="button3" href="/third"><img src="grit2.jpg" class="main right">
+      <a class="button3" href="./third"><img src="grit2.jpg" class="right">
         <div class="caption3">
             <p class="largefont">FIND YOUR GRIT</p>
             <p class="smallfont">Achieve Your Goals</p>
@@ -124,7 +123,7 @@
       </div>
       <!-- Fourth Image Link -->
       <div id=image-container class="left">
-      <a class="button4" href="/fourth"><img src="fit.jpg" class="main left">
+      <a class="button4" href="./fourth"><img src="fit.jpg" class="left">
         <div class="caption4">
             <p class="largefont">I CAN AND I WILL</p>
             <p class="smallfont">Never Give Up</p>
@@ -164,7 +163,6 @@
             <input placeholder="password" name="password" class="password" pattern="[A-Za-z]{6}" type="password" required></br>
             <input placeholder="email" name="email" class="email" type="text" required></br>
             <button type="submit" id="add-user">SignUp</button>
-            <label for="add-user" id="add-user-label"><p>sign up</p></label>
         </form>
       </section>
       <!-- Login Container -->
@@ -179,7 +177,7 @@
       <!-- Update Container -->
       <section class="update-user-view container">
           <h1>Update user</h1>
-          <form action="/" id="update-user-form" method="put">
+          <form action="./" id="update-user-form" method="put">
             <label>username:</label>
             <!-- <input placeholder="username" name="username" class="username" type="text" required></br> -->
             <label>email:</label>
@@ -191,7 +189,7 @@
       <!-- Delete Container -->
       <section class="delete-user-view container">
         <h1>Delete user</h1>
-        <form action="/" id="delete-user-form" method="delete">
+        <form action="./" id="delete-user-form" method="delete">
           <label>username:</label>
           <input placeholder="username" name="username" class="username" type="text" disabled required></br>
           <label>email:</label>
@@ -202,37 +200,37 @@
      <!-- About View Container -->
      <section class="about-view container">
         <section id="about-view"></section>
-        <p class"aboutpage"> About the creators:</p>
-        <div class="row">
-        <!-- Sarah -->
-        <div class="aboutsarah">
-          <div class="overlay">
-          <div class="text">
-            <p class="abouttext">Sarah</p>
-            <p class="abouttext">blah blah blah</p>
-          </div>
-        </div>
-      </div>
-        <!-- Ozge-->
-        <div class="aboutozge">
-            <div class="overlay">
-            <div class="text">
-              <p class="abouttext">Ozge</p>
-              <p class="abouttext">blah blah blah</p>
-            </div>
-        </div>
-        </div>
-        <!-- Liza-->
-        <div class="aboutliza">
-            <div class="overlay">
-            <div class="text">
-              <p class="abouttext">Liza</p>
-              <p class="abouttext">blah blah blah</p>
-            </div>
-        </div>
-        </div>
+
+        <section class="profile-info">
+        <div class="biopic" id="biopicSarah">
+        <span>Sarah</span>
         </div>
       </section>
+      <section class="profile-info">
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ut totam voluptatum placeat facilis, numquam magnam sunt repudiandae facere odit sapiente maiores hic id. Voluptatem eaque qui molestias quia rerum.</div>
+      </section>
+
+      <section class="profile-info">
+        <div class="biopic" id="biopicOzge">
+        <span>Ozge</span>
+        </div>
+      </section>
+      <section class="profile-info">
+        <div>words words words</div>
+      </section>
+
+      <section class="profile-info">
+        <div class="biopic" id="biopicLiza">
+        <span>Liza</span>
+      </div>
+      </section>
+      <section class= "profile-info">
+        <div>blah blah i'm in debt so here i am. hi</div>
+      </section>
+
+
+
+    </section>
     </main>
     <footer>
       <!-- Soical Icons -->
