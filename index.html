@@ -29,20 +29,23 @@
           <!-- <p id="favorite-text">click the heart to add to your favorites</p> -->
           <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
           <label id="label-favorite-id" class="label-favorite" for="{{index}}">
-            <div class="entypo-heart"></div>
-            <div class="entypo-heart-empty"></div>
           </label>
         </div>
       </div>
         </li>
   </script>
+
   <script type="text/x-handlebars-template" id="video-favorite-template">
     <li class="video-item" data-video-id={{index}}>
       <div class="video-container">
-         <iframe id="video-{{index}}" width= "560" height= "315" src={{video_url}} gesture="media" allow="encrypted-media">
+         <iframe id="video-{{index}}" src={{video_url}} gesture="media" allow="encrypted-media">
         </iframe>
+      <div id "favorite-video" class="video-text">
+      <button type="button" class="delete-button" id="{{video_url}}">delete favorite</button>
+      <label id="label-delete-id" class="label-delete" for="{{video_url}}">
+      </label>
       </div>
-      <button type="button" class="delete" id="{{video_url}}">delete favorite</button>
+      </div>
     </li>
   </script>
 

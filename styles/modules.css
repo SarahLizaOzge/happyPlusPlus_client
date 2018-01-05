@@ -18,7 +18,9 @@
 /* #label-favorite-id {
   display: none;
 } */
-
+.delete-button {
+ display:none;
+}
 button {
   text-align: center;
   font-family: 'Roboto', sans-serif;

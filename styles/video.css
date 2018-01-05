@@ -29,9 +29,11 @@
  height: 500px;
 }
 
-.video-container button {
+/* .video-container button {
   display: none;
-}
+} */
+
+/* favorite button */
 .label-favorite {
   width: 60px;
   height: 60px;
@@ -54,6 +56,32 @@
   display: block;
   float: right;
  }
+
+
+/*delete button*/
+ .label-delete {
+  width: 60px;
+  height: 60px;
+  background-image:url("white-heart.png");
+  background-repeat: no-repeat;
+  background-position: -85px -9px;
+  position: relative;
+  margin: 1% 5% 5% 5%;
+  display: block;
+  float: right;
+ }
+ .label-delete:hover {
+  width: 60px;
+  height: 60px;
+  background-image:url("white-heart.png");
+  background-repeat: no-repeat;
+  background-position: -27px -9px;
+  position: relative;
+  margin: 1% 5% 5% 5%;
+  display: block;
+  float: right;
+ }
+
 
 
 
