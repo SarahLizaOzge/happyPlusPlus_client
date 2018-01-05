@@ -164,11 +164,17 @@
       <section class="user-view container">
         <h1>Sign Up</h1>
         <form id="user-form" method="post">
-            <input placeholder="username" name="username" class="username" type="text" required></br>
-            <input placeholder="password" name="password" class="password" pattern="[A-Za-z]{6}" type="password" required></br>
-            <input placeholder="email" name="email" class="email" type="text" required></br>
-            <button type="submit" id="add-user">Sign Up</button>
-            <!-- <label for="add-user" id="add-user-label"><p>sign up</p></label> -->
+          <div class="form-container">
+                    <input placeholder="username" name="username" class="username" type="text" required>
+                    </br>
+                    <input placeholder="password" name="password" class="password" pattern="[A-Za-z]{6}" type="password" required>
+                    <p class="formtext">passwords must be 6 letters long, no numbers</p>
+                    </br>
+                    <input placeholder="email" name="email" class="email" type="text" required>
+                    </br>
+                    <button type="submit" id="add-user">Sign Up</button>
+                    <!-- <label for="add-user" id="add-user-label"><p>sign up</p></label> -->
+          </div>
         </form>
       </section>
       <!-- Login Container -->
