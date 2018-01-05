@@ -89,7 +89,7 @@ background-color: rgb(80, 77, 77);
 
 .topnav {
   overflow: hidden;
-  background: linear-gradient(to bottom right, black, rgb(80, 77, 77));
+  background: black;
   opacity: .7;
   position: fixed;
   z-index: 100;
