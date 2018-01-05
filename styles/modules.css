@@ -21,40 +21,4 @@
 .delete {
  display:none;
 }
-button {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 2vw;
-  border-radius: 13%;
-  display: block;
-  width: 20%;
-  background: linear-gradient(to bottom left,mediumorchid, lightskyblue);
-  margin: 0 auto;
-}
 
-/*buttons*/
-#add-user {
-  display: none;
-}
-#add-user-label {
-  margin: 1%;
-  display: block;
-  background-color:#353333ba;
-  border-radius: 3px;
-  border: 1px solid white;
-  width:100px;
-  height: 40px;
-  padding: 0px;
-
-}
-#add-user-label:hover {
-
-  background-color:#797777ba;
-
-
-}
-#add-user-label p {
-  display: block;
-  color: white;
-  margin-top:0px;
-}

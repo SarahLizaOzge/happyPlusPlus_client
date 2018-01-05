@@ -24,8 +24,8 @@ div.hamburger {
 
  .topnav {
   overflow: hidden;
-  background: linear-gradient(to bottom, black, rgb(73, 61, 61));
-  opacity: .7;
+  background: rgba(0, 0, 0, 0.76);
+  /* opacity: .7; */
   position: fixed;
   top: 0%;
   width: 100%;
@@ -37,8 +37,10 @@ z-index: 10;
   color: white;
   text-align: center;
   text-decoration: none;
-  font-size: 3vw;
+  letter-spacing: 5px;
+  font-size: 2vw;
   font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
 }
 .topnav a:hover {
   background-color: rgb(80, 77, 77);
@@ -90,7 +92,6 @@ background-color: rgb(80, 77, 77);
 .topnav {
   overflow: hidden;
   background: black;
-  opacity: .7;
   position: fixed;
   z-index: 100;
   background-position: center;
@@ -99,15 +100,18 @@ background-color: rgb(80, 77, 77);
   right: .1%;
   padding-top: 2vw;
   padding-bottom: 2vw;
+  color:white;
 }
 
 .topnav a {
   display: inline;
   color: white;
   text-align: left;
+  letter-spacing: 5px;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 1vw;
+  text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
 }
 

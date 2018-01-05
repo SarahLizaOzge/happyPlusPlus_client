@@ -63,7 +63,8 @@ div.aboutsarah {
 
 .text {
   color: black;
-  font-size: 20px;
+  font-size: 3vw;
+  text-transform: uppercase;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -84,7 +85,33 @@ div.aboutsarah {
     display: block;
     max-width: 990px;
     margin: 0 auto;
+    text-align: center;
   }
+  .aboutinfo {
+    width: 100%;
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: pink;
+  }
+
+  .aboutinfo1 {
+    width: 30%;
+    height: 100%;
+    margin-right: 4%;
+  }
+
+  .aboutinfo2 {
+    width: 30%;
+    height: 100%;
+    margin-right: 4%;
+  }
+
+  .aboutinfo3 {
+    width: 30%;
+    height: 100%;
+  }
+
   .aboutliza {
     background-image: url("liza.jpg");
     background-repeat: no-repeat;
@@ -110,4 +137,5 @@ div.aboutsarah {
     height: 200px;
     margin-right:4%;
   }
+ 
 }
