@@ -1,67 +1,104 @@
-@media screen and (min-width: 650px) {
-
-
-.profile-info {
-    display: inline-block;
-    width: calc(100% / 3);
-    margin: 4% 0;
-    margin-left: calc((100% / 3) / 3);
-    font-size: 2vw;
-    text-align: center;
-    
-    color:red;
-  }
-
-  .biopic, #biopicLiza {
-    border-radius: 108px;
-    border: 8px solid #303030;
-    width: 200px;
-    height: 200px;
-    background-image: url('styles/img/liza.png');
-  }
-
-  .biopic, #biopicOzge {
-    border-radius: 108px;
-    border: 8px solid #303030;
-    width: 200px;
-    height: 200px;
-    background-image: url(ozge.png);
-  }
-
-  .biopic, #biopicSarah {
-    border-radius: 108px;
-    border: 8px solid #303030;
-    width: 200px;
-    height: 200px;
-    background-image: url(sarah.png);
-    font-size: 1.5vw;
-  }
-
-  .biopic span {
-    border-radius: 108px;
-    width: 200px;
-    height: 200px;
-    display: block;
-    text-indent: -5000px;
-    line-height: 200px;
-    font-family: 'Cutive Mono', monospace;
-    font-size: 2.5em;
-    font-weight: bold;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.685);
-    color: #7e7e7e;
-    text-align: center;
-    transition: all 0.5s;
-    overflow: hidden;
-  }
-
-  .biopic span:hover {
-    background: rgba(44, 44, 44, 0.5);
-    text-indent: 0px;
-    overflow: hidden;
-  }
-
-  .about-info {
-    color:blue;
-  }
+/* .about-view {
+  margin-left: 5%;
+  margin-right: 5%;
+} */
+/* .row {
+  display: inline;
+  text-align: center;
+  background-color:pink;
+} */
+div.row {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
+div.aboutliza {
+  background-image: url("liza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:300px;
+  height:400px;
+}
+
+div.aboutozge {
+  background-image: url("ozge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:300px;
+  height:400px;
+}
+
+div.aboutsarah {
+  background-image: url("ozge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:300px;
+  height:400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: darkgray;
+}
+
+.aboutsarah:hover .overlay {
+  opacity: .8;
+}
+.aboutozge:hover .overlay {
+  opacity: .8;
+}
+.aboutliza:hover .overlay {
+  opacity: .8;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 700px) {
+
+  div.row {
+    width: 100%;
+    display: block;
+    max-width: 990px;
+    margin: 0 auto;
+  }
+  .aboutliza {
+    background-image: url("liza.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 200px;
+  }
+
+  .aboutozge {
+    background-image: url("ozge.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 200px;
+    margin-right:4%;
+  }
+
+  .aboutsarah {
+    background-image: url("ozge.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 200px;
+    margin-right:4%;
+  }
+}
