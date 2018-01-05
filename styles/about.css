@@ -1,44 +1,103 @@
-div {
-  position: relative;
+.about-view {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* .row {
+  display: inline;
+  text-align: center;
+  background-color:pink;
+} */
+div.row {
+  margin: 0 auto;
+}
+
+div.aboutliza {
+  background-image: url("liza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:300px;
+  height:400px;
+}
+
+div.aboutozge {
+  background-image: url("ozge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:300px;
+  height:400px;
+}
+
+div.aboutsarah {
+  background-image: url("ozge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:300px;
+  height:400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: gray;
+}
+
+.aboutsarah:hover .overlay {
+  opacity: .7;
+}
+.aboutozge:hover .overlay {
+  opacity: .7;
+}
+.aboutliza:hover .overlay {
+  opacity: .8;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    margin: 0 auto;
   }
 
-.profile-image-container-liza {
-  width: 100%;
-  margin: 100%;
-  max-width: 900px;
-  display: block;
-  background-color: aqua;
-  background-image: url(grit2.jpg);
+  div.row {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .aboutliza {
+    background-image: url("liza.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 200px;
+  }
+
+  .aboutozge {
+    background-image: url("ozge.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 200px;
+    margin-right:4%;
+  }
+
+  .aboutsarah {
+    background-image: url("ozge.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 200px;
+    margin-right:4%;
+  }
 }
-
-.profile-image-container {
-  position: inherit;
-   width: 100%;
-   margin: 0 auto;
-   max-width: 900px;
-   display: block;
-   width:100%;
-   margin: 0 auto;
- }
-
-
-@media screen and (min-width: 600px) {
-
- .profile-image-container {
-   width: 47%;
-   margin: .5% auto;
-   float: right;
- }
-
- .profile-image-container-liza {
-  width: 47%;
-  margin: .5% auto;
-  float: left;
-}
-  /* .profileimage {
-    width: 300px;
-    max-height: 100px;
-    margin: 1% 1% 1% 1%;
-  } */
-}
-

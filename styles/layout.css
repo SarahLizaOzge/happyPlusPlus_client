@@ -44,7 +44,7 @@ font-size: 5vw;
 }
 
 @media screen and (min-width: 1200px) {
- img {
+ img{
     width: 600px;
     max-height: 400px;
     margin: 1% 1% 1% 1%;
