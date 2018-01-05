@@ -25,27 +25,30 @@
       <div class="video-container">
          <iframe id="video-{{id.videoId}}"  src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
         </iframe>
-        <div id "favorite-video" class="video-text">
+        <div class="video-text">
           <!-- <p id="favorite-text">click the heart to add to your favorites</p> -->
+<<<<<<< HEAD
           <button class="favorite-button" type="checkbox" id="{{index}}">Add to Favorites</button>
           <label id="label-favorite-id" class="label-favorite" for="{{index}}">
+=======
+          <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
+          <label class="label-favorite" for="{{index}}">
+            <div class="entypo-heart"></div>
+            <div class="entypo-heart-empty"></div>
+>>>>>>> f44ca1c4b6a1434bfa219b3703f6218c83f0779f
           </label>
         </div>
       </div>
         </li>
   </script>
-
   <script type="text/x-handlebars-template" id="video-favorite-template">
     <li class="video-item" data-video-id={{index}}>
       <div class="video-container">
-         <iframe id="video-{{index}}" src={{video_url}} gesture="media" allow="encrypted-media">
+         <iframe id="video-{{index}}" width= "560" height= "315" src={{video_url}} gesture="media" allow="encrypted-media">
         </iframe>
-      <div id "favorite-video" class="video-text">
-      <button type="button" class="delete" id="{{video_url}}">delete favorite</button>
-      <label id="label-delete-id" class="label-delete" for="{{video_url}}">
-      </label>
       </div>
-      </div>
+      <button type="button" class="delete
+      " id="{{video_url}}">delete favorite</button>
     </li>
   </script>
 
@@ -54,12 +57,12 @@
     <!-- Desktop View Nav -->
 
     <header id="home" class="mainheader">
+        <label for="show-menu" id="toggle-menu">
+          <div class="hamburger">
+          </div>
+        </label>
         <nav class="topnav">
-          <label for="show-menu" id="toggle-menu">
-            <div class="hamburger">
-            </div>
-          </label>
-          <input type="checkbox" id="show-menu" name="checkbox-menu"/>
+          <input type="checkbox" id="show-menu">
           <ul class="menu">
           <li class="tab home" data-content="home">
           <a class="active" href='./'>Home</a>
@@ -180,7 +183,7 @@
       <!-- Login Container -->
       <section class="user-login-view container">
           <h1>Login</h1>
-          <form id="user-login-form" method="post">
+          <form action="./" id="user-login-form" method="post">
               <input placeholder="username" name="username" class="username" type="text" required></br>
               <input placeholder="password" name="password" class="password" type="password" required></br>
               <button type="submit" id="login">Login</button>
@@ -254,9 +257,33 @@
           Javascript developer. Her dream to one day start an animal sanctuary for pigs (because they’re awesome).</p></div>
         </div>
         </div>
+      </section>
+      <section class="profile-info">
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ut totam voluptatum placeat facilis, numquam magnam sunt repudiandae facere odit sapiente maiores hic id. Voluptatem eaque qui molestias quia rerum.</div>
+      </section>
+
+      <section class="profile-info">
+        <div class="biopic" id="biopicOzge">
+        <span>Ozge</span>
         </div>
 
       </section>
+      <section class="profile-info">
+        <div>words words words</div>
+      </section>
+
+      <section class="profile-info">
+        <div class="biopic" id="biopicLiza">
+        <span>Liza</span>
+      </div>
+      </section>
+      <section class= "profile-info">
+        <div>blah blah i'm in debt so here i am. hi</div>
+      </section>
+
+
+
+    </section>
     </main>
     <footer>
       <!-- Soical Icons -->
