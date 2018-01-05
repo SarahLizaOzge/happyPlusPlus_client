@@ -25,22 +25,26 @@
       <div class="video-container">
          <iframe id="video-{{id.videoId}}"  src="https://www.youtube.com/embed/{{id.videoId}}" gesture="media" allow="encrypted-media">
         </iframe>
-        <div class="video-text">
+        <div id "favorite-video" class="video-text">
           <!-- <p id="favorite-text">click the heart to add to your favorites</p> -->
           <button class="favorite-button" type="button" id="{{index}}">Add to Favorites</button>
-          <label class="label-favorite" for="{{index}}">
-            <div class="entypo-heart"></div>
-            <div class="entypo-heart-empty"></div>
+          <label id="label-favorite-id" class="label-favorite" for="{{index}}">
           </label>
         </div>
       </div>
         </li>
   </script>
+
   <script type="text/x-handlebars-template" id="video-favorite-template">
     <li class="video-item" data-video-id={{index}}>
       <div class="video-container">
-         <iframe id="video-{{index}}" width= "560" height= "315" src={{video_url}} gesture="media" allow="encrypted-media">
+         <iframe id="video-{{index}}" src={{video_url}} gesture="media" allow="encrypted-media">
         </iframe>
+      <div id "favorite-video" class="video-text">
+      <button type="button" class="delete" id="{{video_url}}">delete favorite</button>
+      <label id="label-delete-id" class="label-delete" for="{{video_url}}">
+      </label>
+      </div>
       </div>
     </li>
   </script>
@@ -50,14 +54,14 @@
     <!-- Desktop View Nav -->
 
     <header id="home" class="mainheader">
-        <label for="show-menu" id="toggle-menu">
-          <div class="hamburger">
-          </div>
-        </label>
         <nav class="topnav">
+          <label for="show-menu" id="toggle-menu">
+            <div class="hamburger">
+            </div>
+          </label>
           <input type="checkbox" id="show-menu">
           <ul class="menu">
-          <li class="tab" data-content="home">
+          <li class="tab home" data-content="home">
           <a class="active" href='/'>Home</a>
 
           </li>
@@ -94,7 +98,7 @@
       <section class="main-view container">
       <!-- First Image Link -->
         <div id=image-container class="right">
-        <a class="button1" href="/first"><img src="mindset.jpg" class="right img">
+        <a class="button1" href="/first"><img src="mindset.jpg" class="main right">
           <div class="caption1">
               <p class="largefont">GROWTH MINDSET</p>
               <p class="smallfont">Let's Do This</p>
@@ -103,7 +107,7 @@
         </div>
         <!-- Second Image Link -->
         <div id=image-container class="left"><a class="button2" href="/second">
-          <img src="wild.jpg"  class="left">
+          <img src="wild.jpg"  class="main left">
           <div class="caption2">
             <p class="largefont">INTO THE WILD</p>
             <p class="smallfont">Get Inspired</p>
@@ -112,7 +116,7 @@
       </div>
       <!-- Third Image Link -->
       <div id=image-container class="right">
-      <a class="button3" href="/third"><img src="grit2.jpg" class="right">
+      <a class="button3" href="/third"><img src="grit2.jpg" class="main right">
         <div class="caption3">
             <p class="largefont">FIND YOUR GRIT</p>
             <p class="smallfont">Achieve Your Goals</p>
@@ -121,7 +125,7 @@
       </div>
       <!-- Fourth Image Link -->
       <div id=image-container class="left">
-      <a class="button4" href="/fourth"><img src="fit.jpg" class="left">
+      <a class="button4" href="/fourth"><img src="fit.jpg" class="main left">
         <div class="caption4">
             <p class="largefont">I CAN AND I WILL</p>
             <p class="smallfont">Never Give Up</p>
@@ -158,7 +162,7 @@
         <h1>Sign Up</h1>
         <form id="user-form" method="post">
             <input placeholder="username" name="username" class="username" type="text" required></br>
-            <input placeholder="password" name="password" class="password" type="password" required></br>
+            <input placeholder="password" name="password" class="password" pattern="[A-Za-z]{6}" type="password" required></br>
             <input placeholder="email" name="email" class="email" type="text" required></br>
             <button type="submit" id="add-user">SignUp</button>
         </form>
@@ -177,7 +181,7 @@
           <h1>Update user</h1>
           <form action="/" id="update-user-form" method="put">
             <label>username:</label>
-            <input placeholder="username" name="username" class="username" type="text" required></br>
+            <!-- <input placeholder="username" name="username" class="username" type="text" required></br> -->
             <label>email:</label>
             <input placeholder="email" name="email" class="email" type="text" required></br>
             <button type="submit" id="update-user">Update</button>
@@ -189,9 +193,9 @@
         <h1>Delete user</h1>
         <form action="/" id="delete-user-form" method="delete">
           <label>username:</label>
-          <input placeholder="username" name="username" class="username" type="text" required></br>
+          <input placeholder="username" name="username" class="username" type="text" disabled required></br>
           <label>email:</label>
-          <input placeholder="email" name="email" class="email" type="text" required></br>
+          <input placeholder="email" name="email" class="email" type="text"disabled required></br>
           <button type="submit" id="delete-user">Delete</button>
         </form>
     </section>

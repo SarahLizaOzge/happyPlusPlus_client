@@ -1,4 +1,11 @@
 /* video styles */
+.entypo-heart {
+  display:none;
+}
+.entypo-heart-empty {
+  display:none;
+}
+
 .video-item {
 /*   background-color: #00ffff78; */
 }
@@ -22,40 +29,59 @@
  height: 500px;
 }
 
-.video-container button {
+/* .video-container button {
   display: none;
-}
+} */
+
+/* favorite button */
 .label-favorite {
-  background-image: url("white-heart.png");
+  width: 60px;
+  height: 60px;
+  background-image:url("white-heart.png");
+  background-repeat: no-repeat;
+  background-position: -85px -9px;
   position: relative;
   margin: 1% 5% 5% 5%;
   display: block;
   float: right;
  }
-/* .label-favorite div {
-  position: absolute;
+ .label-favorite:hover {
+  width: 60px;
+  height: 60px;
+  background-image:url("white-heart.png");
+  background-repeat: no-repeat;
+  background-position: -27px -9px;
+  position: relative;
+  margin: 1% 5% 5% 5%;
   display: block;
-  font-size: 3vw;
-} */
-.entypo-heart-empty {
-  display:block;
-  position: absolute;
-  visibility: visible;
-  color:white;
-  font-size:3vw;
-}
-.entypo-heart {
+  float: right;
+ }
+
+
+/*delete button*/
+ .label-delete {
+  width: 60px;
+  height: 60px;
+  background-image:url("delete-x.png");
+  background-repeat: no-repeat;
+  background-position: -85px -9px;
+  position: relative;
+  margin: 1% 5% 5% 5%;
   display: block;
-  position: absolute;
-  visibility: hidden;
-  color: white;
-  font-size:3vw;
-}
+  float: right;
+ }
+ .label-delete:hover {
+  width: 60px;
+  height: 60px;
+  background-image:url("delete-x.png");
+  background-repeat: no-repeat;
+  background-position: -27px -9px;
+  position: relative;
+  margin: 1% 5% 5% 5%;
+  display: block;
+  float: right;
+ }
 
-.entypo-heart-empty:hover {
-color: gold;
-
-}
 
 
 

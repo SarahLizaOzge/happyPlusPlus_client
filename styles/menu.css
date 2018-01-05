@@ -1,90 +1,82 @@
 /* mobile nav */
-
- .topnav {
-  overflow: hidden;
-  background: linear-gradient(to bottom right, black, rgb(80, 77, 77));
-  opacity: .7;
-  position: fixed;
-  z-index: 10;
-  background-position: center;
-  top: 0%;
-  width: 90%;
-  left: .1%;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-}
- .topnav li {
-        display: inline;
-    }
-
-.topnav a {
-  display: inline;
-  color: white;
-  text-align: left;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 2vw;
-  font-family: 'Roboto', sans-serif;
-}
-
-.topnav a:hover {
-  background-color: rgb(80, 77, 77);
-  opacity: .7;
-  color: white;
-}
-.hamburger {
+div.hamburger {
     position: absolute;
     right: 0px;
-    top: 0px;
+    top: 17px;
     margin-right: 2%;
     width: 35px;
     height: 6px;
     border-top: 5px solid white;
     border-bottom: 15px double white;
-    margin: 0% 1%;
-    z-index: 100;
+    z-index: 1000;
 }
 
-    #show-menu {
-        display: none;
-    }
+#show-menu {
+    display: none;
+}
 
-    .tab {
-        visibility: collapse;
-    }
+.tab {
+    visibility: collapse;
+}
 
-/*      #show-menu:checked {
-         position: fixed;
-         z-index: 9;
-     }
-     */
-    
-    #show-menu:checked ~ * .tab {
-        
+/*begin mobile styles*/
+
+ .topnav {
+  overflow: hidden;
+  background: linear-gradient(to bottom, black, rgb(73, 61, 61));
+  opacity: .7;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+z-index: 10;
+}
+
+.topnav a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 3vw;
+  font-family: 'Roboto', sans-serif;
+}
+.topnav a:hover {
+  background-color: rgb(80, 77, 77);
+  opacity: .7;
+}
+
+/*drop down*/
+#show-menu:checked~* .tab{
         visibility: visible;
         display: block;
         text-align: center;
-        padding:0 10px;	
+        padding:0px 0px;
         color:#FFF;
-        font-size:20px;
         line-height: 60px;
         text-decoration:none;
         z-index:100;
     }
+    /*add margin to top link*/
+    #show-menu:checked~* .home{
+        margin-top: 90px;
+}
+
+
 
 @media screen and (min-width: 1200px) {
+    .topnav li {
+        display: inline;
+    }
     .hamburger{
         display: none;
     }
 
     .tab {
         visibility: visible;
-       
+
     }
  #show-menu:checked ~ * .tab {
         visibility: visible;
         display: inline;
-       
     }
     /* desktop nav */
 

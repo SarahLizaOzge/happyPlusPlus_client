@@ -23,7 +23,7 @@ header, main, sidebar, footer, article, section, div, p {
     padding: 0;
     width: 100%;
     display: inline-block;
-   }
+    }
 
 main {
   display: block;
