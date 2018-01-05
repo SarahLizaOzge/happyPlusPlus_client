@@ -36,12 +36,12 @@ img {
     max-height: 600px;
     max-width: 900px;
     margin: 1% 1% 1% 1%;
-  }
+}
 
 .largefont {
-font-size: 4vw;
-letter-spacing: 5px;
- margin: 0px auto;
+    font-size: 4vw;
+    letter-spacing: 5px;
+    margin: 0px auto;
 }
 
 .smallfont {
@@ -52,7 +52,7 @@ letter-spacing: 5px;
 
 form {
     padding: 5%;
-  }
+}
 
 input {
     padding:1%;
@@ -63,32 +63,32 @@ input {
     background-color: black;
     display: block;
     margin: 0 auto;
-  }
-
-  .aboutpage {
-      color:white;
-  }
-
-  .header {
-    width: 100%;
-    height: 400px;
-  }
-
-  .headeruppertext {
-    font-size: 3vw;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 10px;
-    text-shadow: 1px 1px 1px #ffffff;
-    padding-bottom: 2%;
 }
 
-    .headertext {
-    font-size: 7vw;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 30px;
-    text-shadow: 1px 1px 1px #ffffff;
+.aboutpage {
+    color:white;
+}
+
+.header {
+    width: 100%;
+    height: 400px;
+}
+
+.headeruppertext {
+font-size: 3vw;
+color: white;
+font-family: 'Roboto', sans-serif;
+letter-spacing: 10px;
+text-shadow: 1px 1px 1px #ffffff;
+padding-bottom: 2%;
+}
+
+.headertext {
+font-size: 7vw;
+color: white;
+font-family: 'Roboto', sans-serif;
+letter-spacing: 30px;
+text-shadow: 1px 1px 1px #ffffff;
 }
 
 button {
@@ -163,6 +163,11 @@ letter-spacing: 5px;
     height: 400px;
   }
 
+  .header-about {
+    width: 100%;
+    height: 200px;
+  }
+
 .headeruppertext {
 font-size: 2vw;
 color: white;
@@ -191,7 +196,7 @@ button {
     background-color: black;
     color: white;
     margin: 3% auto;
-  }
+}
 
   button:hover {
     color:black;
