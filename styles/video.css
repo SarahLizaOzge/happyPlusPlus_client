@@ -1,11 +1,7 @@
 /* video styles */
-.entypo-heart {
-  display:none;
+.checked {
+  display: none;
 }
-.entypo-heart-empty {
-  display:none;
-}
-
 .video-item {
 /*   background-color: #00ffff78; */
 }
