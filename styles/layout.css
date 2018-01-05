@@ -129,11 +129,13 @@ button {
    margin: .5% auto;
  }
 
-.main:hover {
-     opacity: .3;
-     transition: opacity .60s ease;
+ .transition {
+    transition: .60s ease;
  }
 
+ .main:hover .transition{
+    opacity: .3;
+}
  .left {
     float: left;
 }
