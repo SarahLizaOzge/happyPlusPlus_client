@@ -79,9 +79,10 @@ p.abouttext  {
 }
 
  .aboutinfo p {
+   letter-spacing: .08em;
    text-align: left;
    color: white;
-   line-height: 175%;
+   line-height: 200%;
   }
 
 @media screen and (min-width: 700px) {
@@ -93,43 +94,37 @@ p.abouttext  {
     margin: 0 auto;
     text-align: center;
   }
+  
   div.about-wrapper {
   width: 100%;
   display: block;
  
-
 }
   .aboutinfo {
+    margin-top:1%;
     width: 100%;
     display: block;
-    margin: 0 auto;
-    
-  }
+   }
 
- .aboutinfo p {
-   text-align: left;
-   color: white;
-   line-height: 175%;
-  }
+ .aboutinfo  p {
+   display: inline-block;
+   vertical-align: text-top;
+   }
 
   .aboutinfo1 {
     margin-top: 4%;
     width: 30%;
-    height: 100%;
     margin-right: 4%;
   }
 
   .aboutinfo2 {
-    margin-top: 4%;
     width: 30%;
-    height: 100%;
     margin-right: 4%;
   }
 
   .aboutinfo3 {
-    margin-top: 4%;
     width: 30%;
-    height: 100%;
+   
   }
 
   .aboutliza {
