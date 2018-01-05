@@ -49,7 +49,9 @@ var app = app || {};
     $('.first-view').show();
     app.allVideos.map(video => $('#first-view').append(video.toHtml()));
     $('.favorite-button').on('click', function(){
+      $('input:checkbox').attr('checked', true);
       console.log('button-pressed: ', this.id);
+      console.log('checkbox-state: ', this);
       app.addToFavorites(localStorage.username, app.allVideos[this.id]);
     });
     setTimeout(() => { ($('.is-active').fadeOut('slow')); }, 1000);
