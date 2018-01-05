@@ -43,14 +43,14 @@ div.aboutsarah {
   right: 0;
   opacity: 0;
   transition: .5s ease;
-  background-color: gray;
+  background-color: darkgray;
 }
 
 .aboutsarah:hover .overlay {
-  opacity: .7;
+  opacity: .8;
 }
 .aboutozge:hover .overlay {
-  opacity: .7;
+  opacity: .8;
 }
 .aboutliza:hover .overlay {
   opacity: .8;
@@ -67,13 +67,16 @@ div.aboutsarah {
 }
 
 @media screen and (min-width: 700px) {
-  main {
+
+  body{
     margin: 0 auto;
-  }
+    width: 990px;
+}
 
   div.row {
-    max-width: 1200px;
+    max-width: 990px; 
     margin: 0 auto;
+    background-color: blue;
   }
   .aboutliza {
     background-image: url("liza.jpg");
