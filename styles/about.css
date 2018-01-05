@@ -17,6 +17,7 @@ div.aboutliza {
   background-image: url("liza.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(1);
   width:300px;
   height:400px;
 }
@@ -25,14 +26,16 @@ div.aboutozge {
   background-image: url("ozge.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(1);
   width:300px;
   height:400px;
 }
 
 div.aboutsarah {
-  background-image: url("ozge.jpg");
+  background-image: url("sarah3.png");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(1);
   width:300px;
   height:400px;
 }
@@ -66,6 +69,12 @@ div.aboutsarah {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.abouttext {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 3px #e2e2e2;
 }
 
 @media screen and (min-width: 700px) {
