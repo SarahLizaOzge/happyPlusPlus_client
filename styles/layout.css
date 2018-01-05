@@ -28,7 +28,7 @@ div {
 
 .main:hover {
     opacity: .3;
-    transition: opacity .60s ease-in-out;
+    transition: opacity .60s ease-out;
 }
 
 
@@ -61,6 +61,8 @@ input {
     border: 3px solid white;
     color:white;
     background-color: black;
+    display: block;
+    margin: 0 auto;
   }
 
   .aboutpage {
@@ -89,6 +91,25 @@ input {
     text-shadow: 1px 1px 1px #ffffff;
 }
 
+button {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 2%;
+    border-radius: 1%;
+    display: block;
+    width: 30%;
+    background-color: black;
+    color: white;
+    margin: 3% auto;
+  }
+
+  button:hover {
+    color:black;
+    background-color: white; 
+  }
+
 
 @media screen and (min-width: 1200px) {
  img{
@@ -110,7 +131,7 @@ input {
 
 .main:hover {
      opacity: .3;
-     transition: opacity .60s ease-in-out;
+     transition: opacity .60s ease;
  }
 
  .left {
@@ -158,6 +179,25 @@ font-family: 'Roboto', sans-serif;
 letter-spacing: 30px;
 text-shadow: 1px 1px 1px #ffffff;
 }
+button {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 2%;
+    border-radius: 1%;
+    display: block;
+    width: 20%;
+    background-color: black;
+    color: white;
+    margin: 3% auto;
+  }
+
+  button:hover {
+    color:black;
+    background-color: white; 
+  }
+
 }
 
 /*TEXT STYLES*/

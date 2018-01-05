@@ -21,19 +21,26 @@
 .delete {
  display:none;
 }
-button {
+/* button {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 2vw;
-  border-radius: 13%;
+  font-size: 1.5vw;
+  padding: 2%;
+  border-radius: 1%;
   display: block;
   width: 20%;
-  background: linear-gradient(to bottom left,mediumorchid, lightskyblue);
-  margin: 0 auto;
+  background-color: black;
+  color: white;
+  margin: 3% auto;
+}
+
+button:hover {
+  color:black;
+  background-color: white; */
 }
 
 /*buttons*/
-#add-user {
+/* #add-user {
   display: none;
 }
 #add-user-label {
@@ -57,4 +64,4 @@ button {
   display: block;
   color: white;
   margin-top:0px;
-}
+} */
