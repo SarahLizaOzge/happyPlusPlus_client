@@ -52,6 +52,17 @@
   display: block;
   float: right;
  }
+  #label-favorite-id:checked {
+  width: 60px;
+  height: 60px;
+  background-image:url("white-heart.png");
+  background-repeat: no-repeat;
+  background-position: -27px -9px;
+  position: relative;
+  margin: 1% 5% 5% 5%;
+  display: block;
+  float: right;
+ }
 
 
 /*delete button*/
